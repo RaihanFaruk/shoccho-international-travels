@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 pt-7 text-xs text-[#8fb1a7] md:flex-row">
           <p className="text-center md:text-left">© ২০২৫ স্বচ্ছ ইন্টারন্যাশনাল ট্রাভেলস. সর্বস্বত্ব সংরক্ষিত।</p>
-          <div className="flex flex-wrap justify-center gap-5"><Link className="transition hover:text-white hover:underline" href="/privacy-policy">গোপনীয়তা নীতি</Link><Link className="transition hover:text-white hover:underline" href="/terms-of-service">শর্তাবলী ও নিয়মাবলী</Link><Link className="transition hover:text-white hover:underline" href="/sitemap.xml">সাইটম্যাপ (XML)</Link></div>
+          <div className="flex flex-wrap justify-center gap-5"><Link className="transition hover:text-white hover:underline" href="/privacy">গোপনীয়তা নীতি</Link><Link className="transition hover:text-white hover:underline" href="/terms">শর্তাবলী ও নিয়মাবলী</Link><Link className="transition hover:text-white hover:underline" href="/sitemap.xml">সাইটম্যাপ (XML)</Link></div>
         </div>
       </div>
     </footer>

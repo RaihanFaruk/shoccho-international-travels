@@ -56,9 +56,9 @@ export const packagesData: TourPackage[] = [
     badge: "ফ্ল্যাগশিপ কাফেলা",
     imageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80",
     galleryUrls: [
-      "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=800&q=80",
     ],
     overview: "পবিত্র কাবা প্রাঙ্গণে ৫-স্টার ক্লক টাওয়ার হোটেলের আরামদায়ক আবাসন, সার্বক্ষণিক অভিজ্ঞ মোয়াল্লিমের সান্নিধ্য এবং সম্পূর্ণ স্বচ্ছ ব্যয়ের নিশ্চয়তা নিয়ে আমাদের ফ্ল্যাগশিপ ওমরাহ প্যাকেজ।",
     highlights: [
@@ -115,7 +115,7 @@ export const packagesData: TourPackage[] = [
     priceBn: "৳ ২,১৫,০০০",
     currency: "BDT",
     badge: "রমজান স্পেশাল",
-    imageUrl: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=800&q=80",
     overview: "লাইলাতুল কদরের পুণ্যময় রজনী ও পবিত্র ঈদুল ফিতরের দিনগুলোতে কাবা ও মসজিদে নববীর পবিত্র সান্নিধ্যে কাটানোর সুবর্ণ সুযোগ।",
     highlights: [
       "মক্কায় শবে কদর ও খতমে কোরআন তারাবিহতে অংশগ্রহণ",
@@ -154,7 +154,7 @@ export const packagesData: TourPackage[] = [
     priceBn: "৳ ৬,৮৫,০০০",
     currency: "BDT",
     badge: "হজ্জ ২০২৬ প্রিমিয়াম",
-    imageUrl: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
     overview: "সরকারি লাইসেন্সপ্রাপ্ত স্বচ্ছ ট্রাভেলসের তত্ত্বাবধানে মিনায় জোন-১ এসির তাঁবু, ক্লক টাওয়ার হোটেল এবং উচ্চমানের সার্বক্ষণিক সেবাসহ হজের নির্ভরযোগ্য আয়োজন।",
     highlights: [
       "মিনায় জোন-১ ভিআইপি জিপসাম তাঁবু (জামারাতের সবচেয়ে কাছে)",
@@ -229,7 +229,7 @@ export const packagesData: TourPackage[] = [
     priceBn: "৳ ১,১০,০০০",
     currency: "BDT",
     badge: "লাক্সারি রিট্রিট",
-    imageUrl: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
     overview: "স্ফটিক স্বচ্ছ নীল জলরাশির ওপর ওভার-ওয়াটার ভিলা, প্রাইভেট স্পিডবোট ড্রাইভ এবং আন্তর্জাতিক মানের অতিথিপরায়ণতা।",
     highlights: [
       "ওভার ওয়াটার ভিলা স্টে ও প্রাইভেট সানডেক",
@@ -263,7 +263,7 @@ export const packagesData: TourPackage[] = [
     priceBn: "৳ ৭৮,৫০০",
     currency: "BDT",
     badge: "বেস্টসেলার ট্যুর",
-    imageUrl: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80",
     overview: "বুর্জ খলিফার ১২৪ তলার বিস্ময়, মরুভূমির বুকে ৪x৪ ল্যান্ড ক্রুজার ডুন ব্যাশিং এবং দুবাই মেরিনার বিলাসবহুল ডিনার ক্রুজ।",
     highlights: [
       "বুর্জ খলিফা ১২৪ তলা অবজারভেশন ডেক প্রবেশাধিকার",
@@ -324,7 +324,7 @@ export const packagesData: TourPackage[] = [
     priceBn: "৳ ৯,৫০০",
     currency: "BDT",
     badge: "উইকেন্ড স্পেশাল",
-    imageUrl: "https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80",
     overview: "সাজেকের মেঘের রাজ্যে রিসোর্টে থাকার অসাধারণ অভিজ্ঞতা, রুইলুই পাড়া ও কংলাক পাহাড়ের মনোরম সূর্যাস্ত।",
     highlights: ["মেঘের ভিউ বিশিষ্ট প্রিমিয়াম রিসোর্ট", "চান্দের গাড়ি রাইড ও খাগড়াছড়ি আলুটিলা গুহা"],
     inclusions: ["ঢাকা-খাগড়াছড়ি এসি বাস", "রিসোর্ট স্টে", "খাবার", "চান্দের গাড়ি"],

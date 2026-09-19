@@ -7,7 +7,7 @@ const articles = [
     title: "ওমরাহ যাওয়ার আগে ১০টি জরুরি প্রস্তুতি যা জানা আবশ্যক",
     desc: "ইহরামের নিয়মাবলী, লাগেজ প্যাকিং চেকলিস্ট এবং প্রয়োজনীয় ঔষধ সংক্রান্ত গুরুত্বপূর্ণ দিকনির্দেশনা।",
     readTime: "৫ মিনিট পাঠ্য • স্বচ্ছ রিসার্চ টিম",
-    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1470214304380-aadaedcfff1b?auto=format&fit=crop&w=800&q=80",
   },
   {
     category: "ভিসা সহায়ক",
@@ -15,7 +15,7 @@ const articles = [
     title: "ভিসা আবেদনের সঠিক নিয়মাবলী ও ডকুমেন্ট চেকলিস্ট",
     desc: "ব্যাংক স্টেটমেন্ট, ট্যাক্স রিটার্ন ও নো অবজেকশন সার্টিফিকেট নির্ভুলভাবে জমা দেওয়ার পদ্ধতি।",
     readTime: "৭ মিনিট পাঠ্য • কনস্যুলার ডেস্ক",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80",
   },
   {
     category: "বাংলাদেশ ট্রাভেল",
@@ -23,7 +23,7 @@ const articles = [
     title: "বাংলাদেশের ৫টি শান্ত ও অনন্য ইকো-রিসোর্ট",
     desc: "ছুটির দিনে কোলাহলমুক্ত পরিবার সময় কাটাতে পাহাড় ও বনাঞ্চলের নির্ভরযোগ্য রিসোর্ট তালিকা।",
     readTime: "৪ মিনিট পাঠ্য • ট্যুর স্পেশালিস্ট",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1494783367193-149034c05e8f?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

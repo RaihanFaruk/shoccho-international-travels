@@ -41,7 +41,7 @@ export function FeaturedPackages() {
             <div className="lg:col-span-7 bg-[#ecf6f1] rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group border border-[#dbe5e0]/80">
               <div className="relative h-72 sm:h-96 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80"
+                  src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=80"
                   alt="পবিত্র কাবা প্রাঙ্গণে ওমরাহ ও হজ কাফেলার প্রার্থনার দৃশ্য"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"

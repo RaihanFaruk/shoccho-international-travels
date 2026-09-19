@@ -24,7 +24,7 @@ const asiaDestinations = [
     tag: "মালয়েশিয়া",
     title: "কুয়ালালামপুর ও লংকাউই",
     subtitle: "আধুনিক শহর ও শান্ত দ্বীপের মিলন",
-    image: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "d4",
@@ -41,7 +41,7 @@ const middleEastDestinations = [
     tag: "ইউএই",
     title: "দুবাই ডাউনটাউন ও ডেজার্ট",
     subtitle: "বুর্জ খলিফা, মেরিনা ক্রুজ ও সাফারি",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "d6",

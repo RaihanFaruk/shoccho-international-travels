@@ -29,6 +29,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+scripts/lh-*.json
+scripts/lighthouse-summary.json
+*.png
+stitch_*/**/code.html
 
 # env files (can opt-in for committing if needed)
 .env*

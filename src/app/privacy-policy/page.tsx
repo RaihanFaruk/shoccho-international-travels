@@ -1,1 +1,5 @@
-export { default, metadata } from "@/app/privacy/page";
+import { redirect } from "next/navigation";
+
+export default function PrivacyPolicyAlias() {
+	redirect("/privacy");
+}

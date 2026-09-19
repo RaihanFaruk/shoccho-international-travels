@@ -48,7 +48,7 @@ export const travelStoriesData: TravelStory[] = [
     author: "তানভীর আহমেদ",
     authorRole: "স্বচ্ছ গোল্ড মেম্বার",
     authorAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-    coverImage: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80",
+    coverImage: "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?auto=format&fit=crop&w=1200&q=80",
     destination: "মক্কা ও মদিনা, সৌদি আরব",
     readTime: "৬ মিনিট পাঠ",
     date: "জানুয়ারি ২০২৬",

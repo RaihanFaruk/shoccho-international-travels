@@ -70,7 +70,7 @@ export function PersonalizedDiscovery() {
               ব্যক্তিগত কাস্টমাইজেশন
             </span>
             <h3 className="font-title-lg text-title-lg text-[#00453d] font-serif font-bold mt-0.5">
-              আসসালামু আলাইকুম তানভীর, আপনার পছন্দের ভিত্তিতে সাজানো ভ্রমণ পরামর্শ
+              আপনার পছন্দের ভিত্তিতে সাজানো ভ্রমণ পরামর্শ
             </h3>
           </div>
         </div>

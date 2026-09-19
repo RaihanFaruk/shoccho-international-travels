@@ -196,14 +196,14 @@ export function Footer() {
             © ২০২৫ স্বচ্ছ ইন্টারন্যাশনাল ট্রাভেলস (Shoccho International Travels). সর্বস্বত্ব সংরক্ষিত।
           </p>
           <div className="flex items-center gap-space-lg font-label-sm text-label-sm">
-            <Link className="hover:text-primary transition-colors" href="/privacy">
+            <Link className="hover:text-primary transition-colors" href="/privacy-policy">
               গোপনীয়তা নীতি
             </Link>
-            <Link className="hover:text-primary transition-colors" href="/terms">
+            <Link className="hover:text-primary transition-colors" href="/terms-of-service">
               শর্তাবলী ও নিয়মাবলী
             </Link>
-            <Link className="hover:text-primary transition-colors" href="/sitemap">
-              সাইটম্যাপ
+            <Link className="hover:text-primary transition-colors" href="/sitemap.xml">
+              সাইটম্যাপ (XML)
             </Link>
           </div>
         </div>

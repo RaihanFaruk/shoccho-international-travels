@@ -75,7 +75,7 @@ export function HeroSection() {
           <div className="lg:col-span-6 relative">
             <div className="relative w-full h-[360px] sm:h-[460px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl bg-[#e6f0eb] border border-[#dbe5e0]/80">
               <Image
-                src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1920&q=80"
+                src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80"
                 alt="পবিত্র মক্কার মসজিদুল হারাম ও কাবা শরীফের মনোরম সূর্যাস্তকালীন দৃশ্য"
                 fill
                 priority

@@ -1,0 +1,44 @@
+{
+  "home": {
+    "desktop": {
+      "performance": 68,
+      "accessibility": 93,
+      "bestPractices": 96,
+      "seo": 100
+    },
+    "mobile": {
+      "performance": 34,
+      "accessibility": 93,
+      "bestPractices": 100,
+      "seo": 100
+    }
+  },
+  "packages": {
+    "desktop": {
+      "performance": 39,
+      "accessibility": 93,
+      "bestPractices": 100,
+      "seo": 100
+    },
+    "mobile": {
+      "performance": 37,
+      "accessibility": 93,
+      "bestPractices": 100,
+      "seo": 100
+    }
+  },
+  "about": {
+    "desktop": {
+      "performance": 82,
+      "accessibility": 98,
+      "bestPractices": 100,
+      "seo": 100
+    },
+    "mobile": {
+      "performance": 45,
+      "accessibility": 98,
+      "bestPractices": 100,
+      "seo": 100
+    }
+  }
+}

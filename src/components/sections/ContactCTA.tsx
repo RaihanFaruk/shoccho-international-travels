@@ -1,4 +1,6 @@
 
+import { Building2, CheckCircle2, Clock3, MailCheck, PhoneCall, Zap } from "lucide-react";
+
 export function ContactCTA() {
   return (
     <div className="w-full bg-surface-container-lowest">
@@ -12,12 +14,12 @@ export function ContactCTA() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
           {/* Channel 1: Hotline */}
-          <div className="p-space-lg bg-surface-container-low rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div className="group flex flex-col justify-between rounded-2xl border border-outline-variant/30 bg-[linear-gradient(145deg,#ecf6f1,#ffffff)] p-6 shadow-[0_14px_36px_rgba(0,69,61,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_rgba(0,69,61,0.14)] md:p-8">
             <div>
               <div className="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center mb-space-md shadow-sm">
-                <span className="material-symbols-outlined text-2xl">phone_in_talk</span>
+                <PhoneCall aria-hidden="true" className="h-6 w-6" strokeWidth={1.8} />
               </div>
               <h3 className="font-title-lg text-title-lg text-primary font-bold mb-1">
                 ২৪/৭ হটলাইন ও হেল্পডেস্ক
@@ -41,16 +43,16 @@ export function ContactCTA() {
               </div>
             </div>
             <div className="pt-space-md mt-space-md border-t border-outline-variant/30 flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-semibold">
-              <span className="material-symbols-outlined text-xs">check_circle</span>
+              <CheckCircle2 aria-hidden="true" className="h-4 w-4" />
               ২৪ ঘণ্টা গ্রাহক সেবা সক্রিয়
             </div>
           </div>
 
           {/* Channel 2: Office Visit */}
-          <div className="p-space-lg bg-surface-container-low rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div className="group flex flex-col justify-between rounded-2xl border border-outline-variant/30 bg-[linear-gradient(145deg,#fff8dc,#ffffff)] p-6 shadow-[0_14px_36px_rgba(115,92,0,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_rgba(115,92,0,0.14)] md:p-8">
             <div>
               <div className="w-12 h-12 rounded-xl bg-surface-container-lowest text-secondary flex items-center justify-center mb-space-md shadow-sm">
-                <span className="material-symbols-outlined text-2xl">apartment</span>
+                <Building2 aria-hidden="true" className="h-6 w-6" strokeWidth={1.8} />
               </div>
               <h3 className="font-title-lg text-title-lg text-primary font-bold mb-1">
                 প্রধান কার্যালয় ভিজিট
@@ -67,16 +69,16 @@ export function ContactCTA() {
               </address>
             </div>
             <div className="pt-space-md mt-space-md border-t border-outline-variant/30 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
-              <span className="material-symbols-outlined text-xs text-primary">schedule</span>
+              <Clock3 aria-hidden="true" className="h-4 w-4 text-primary" />
               সকাল ৯:০০ - রাত ৯:০০ (প্রতিদিন খোলা)
             </div>
           </div>
 
           {/* Channel 3: Digital / Email */}
-          <div className="p-space-lg bg-surface-container-low rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div className="group flex flex-col justify-between rounded-2xl border border-outline-variant/30 bg-[linear-gradient(145deg,#f8eee8,#ffffff)] p-6 shadow-[0_14px_36px_rgba(125,77,50,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_rgba(125,77,50,0.14)] md:p-8">
             <div>
               <div className="w-12 h-12 rounded-xl bg-surface-container-lowest text-primary flex items-center justify-center mb-space-md shadow-sm">
-                <span className="material-symbols-outlined text-2xl">mark_email_read</span>
+                <MailCheck aria-hidden="true" className="h-6 w-6" strokeWidth={1.8} />
               </div>
               <h3 className="font-title-lg text-title-lg text-primary font-bold mb-1">
                 ইমেইল ও কর্পোরেট কুয়েরি
@@ -92,7 +94,7 @@ export function ContactCTA() {
               </a>
             </div>
             <div className="pt-space-md mt-space-md border-t border-outline-variant/30 flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-semibold">
-              <span className="material-symbols-outlined text-xs">speed</span>
+              <Zap aria-hidden="true" className="h-4 w-4" />
               দ্রুত রিপ্লাই নিশ্চিত
             </div>
           </div>

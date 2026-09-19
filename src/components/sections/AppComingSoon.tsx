@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BellRing, Check, CheckCircle2, Smartphone, Wifi } from "lucide-react";
 
 export function AppComingSoon() {
   const [contact, setContact] = useState("");
@@ -16,11 +17,11 @@ export function AppComingSoon() {
     <div className="w-full bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto px-gutter-lg pt-margin pb-space-lg">
         {/* Mobile App Banner */}
-        <div className="bg-primary rounded-2xl p-space-lg md:p-space-xl text-on-primary overflow-hidden relative shadow-lg">
+        <div className="relative overflow-hidden rounded-[1.75rem] border border-secondary/30 bg-[linear-gradient(120deg,#003f38_0%,#075e54_58%,#126d62_100%)] p-6 text-on-primary shadow-[0_24px_60px_rgba(0,69,61,0.2)] md:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center relative z-10">
             <div className="lg:col-span-8">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary-container rounded-full mb-space-sm">
-                <span className="material-symbols-outlined text-secondary text-sm">phone_iphone</span>
+                <Smartphone aria-hidden="true" className="h-4 w-4 text-secondary" />
                 <span className="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-widest">
                   শীঘ্রই আসছে • COMING SOON
                 </span>
@@ -36,9 +37,7 @@ export function AppComingSoon() {
               <div className="max-w-lg">
                 {isSubmitted ? (
                   <div className="p-4 rounded-xl bg-surface-container-lowest/15 backdrop-blur-md border border-on-primary/20 flex items-center gap-3">
-                    <span className="material-symbols-outlined text-secondary-fixed text-2xl">
-                      check_circle
-                    </span>
+                    <CheckCircle2 aria-hidden="true" className="h-7 w-7 text-secondary-fixed" />
                     <div>
                       <h4 className="font-title-md text-sm font-semibold text-white">
                         ধন্যবাদ! আপনি ওয়েটলিস্টে অন্তর্ভুক্ত হয়েছেন
@@ -70,7 +69,7 @@ export function AppComingSoon() {
                         type="submit"
                         className="px-5 py-3 bg-[#fed65b] hover:bg-[#ffe088] text-[#00453d] font-semibold text-sm rounded-xl shadow-md transition-all whitespace-nowrap flex items-center justify-center gap-1.5 shrink-0"
                       >
-                        <span className="material-symbols-outlined text-sm">notifications_active</span>
+                        <BellRing aria-hidden="true" className="h-4 w-4" />
                         <span>লঞ্চ নোটিফিকেশন পান</span>
                       </button>
                     </div>
@@ -88,10 +87,10 @@ export function AppComingSoon() {
             </div>
 
             <div className="lg:col-span-4 flex justify-center">
-              <div className="w-64 h-80 bg-surface-container-lowest/10 rounded-2xl p-4 backdrop-blur-lg flex flex-col justify-between shadow-2xl border border-on-primary/20">
+              <div className="relative h-[22rem] w-64 rounded-[2rem] border-[7px] border-[#102f2b] bg-surface-container-lowest/10 p-4 shadow-2xl backdrop-blur-lg ring-1 ring-white/20">
                 <div className="flex items-center justify-between pb-2 border-b border-on-primary/20">
                   <span className="font-label-sm text-label-sm text-secondary-fixed font-bold">SHOCCHO APP</span>
-                  <span className="material-symbols-outlined text-sm">wifi</span>
+                  <Wifi aria-hidden="true" className="h-4 w-4" />
                 </div>
                 <div className="space-y-2 py-4 font-sans">
                   <div className="p-2.5 bg-primary-container rounded-lg text-xs flex items-center gap-2">

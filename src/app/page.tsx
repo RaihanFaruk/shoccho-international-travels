@@ -2,7 +2,8 @@ import dynamic from "next/dynamic";
 import { Navbar } from "@/components/navigation/Navbar";
 import { MobileStickyBar } from "@/components/navigation/MobileStickyBar";
 import { HeroSection } from "@/components/hero/HeroSection";
-import { QuickServiceActions } from "@/components/sections/QuickServiceActions";
+import { SmartTravelSearch } from "@/components/hero/SmartTravelSearch";
+import { IntentCards } from "@/components/sections/IntentCards";
 import { PersonalizedDiscovery } from "@/components/sections/PersonalizedDiscovery";
 import { FeaturedPackages } from "@/components/packages/FeaturedPackages";
 
@@ -40,36 +41,39 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-1">
-        {/* 2 & 3. Luxury Editorial Hero Portal with Integrated Smart Travel Search */}
+        {/* 2. Luxury Editorial Hero Portal */}
         <HeroSection />
 
-        {/* 3b. Quick Service Actions */}
-        <QuickServiceActions />
+        {/* 3. First-time visitor wayfinding */}
+        <IntentCards />
 
-        {/* 4. Personalized Discovery */}
-        <PersonalizedDiscovery />
+        {/* 4. Guided search and results handoff */}
+        <SmartTravelSearch />
 
-        {/* 5. Featured Journeys (Magazine Editorial) */}
+        {/* 5. Featured Journeys and direct booking path */}
         <div id="featured-journeys">
           <FeaturedPackages />
         </div>
 
-        {/* 6. Hajj & Umrah Timeline Architecture */}
+        {/* 6. Flagship pilgrimage journey */}
         <div id="hajj-umrah">
           <HajjUmrahFeature />
         </div>
 
-        {/* 7. Destination Matrix & Tour Explorer */}
+        {/* 7. Recommended package discovery */}
+        <PersonalizedDiscovery />
+
+        {/* 8. Destination Matrix & Tour Explorer */}
         <div id="destinations">
           <DestinationDiscovery />
         </div>
 
-        {/* 8. Smart Visa & Flight Concierge Engine */}
+        {/* 9. Smart Visa & Flight Concierge Engine */}
         <div id="visa-engine">
           <ServicesSection />
         </div>
 
-        {/* 9. Trust Architecture & Founder Cinematic Story */}
+        {/* 10. Trust Architecture and reassurance */}
         <div id="why-shoccho">
           <WhyShoccho />
         </div>
@@ -77,7 +81,7 @@ export default function Home() {
           <FounderSection />
         </div>
 
-        {/* 10. Demo Testimonials & Editorial Travel Stories */}
+        {/* 11. Testimonials and editorial inspiration */}
         <div id="testimonials">
           <TestimonialsSection />
         </div>
@@ -85,7 +89,7 @@ export default function Home() {
           <TravelStories />
         </div>
 
-        {/* 11. Shoccho Mobile App & 24/7 Contact Experience */}
+        {/* 12. Secondary contact and product content */}
         <div id="contact">
           <AppComingSoon />
           <ContactCTA />

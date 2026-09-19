@@ -7,10 +7,12 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyBar } from "@/components/navigation/MobileStickyBar";
 import { usePlatform, DemoBooking } from "@/context/PlatformContext";
+import { useNavbarState } from "@/context/NavbarStateContext";
 import { packagesData } from "@/data/packages";
 
 export default function DashboardPage() {
-  const { bookings, wishlist, toggleWishlist, openBookingModal } = usePlatform();
+  const { bookings, openBookingModal } = usePlatform();
+  const { wishlist, toggleWishlist } = useNavbarState();
   const [activeTab, setActiveTab] = useState<"bookings" | "wishlist" | "passengers" | "rewards">("bookings");
 
   const wishlistedPackages = packagesData.filter((p) => wishlist.includes(p.id));

@@ -2,7 +2,8 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { TourPackage } from "@/data/packages";
-import { PlatformNotification, initialNotifications } from "@/data/notifications";
+import { PlatformNotification } from "@/data/notifications";
+import { useNavbarState } from "@/context/NavbarStateContext";
 
 export type BookingStatus =
   | "inquiry"
@@ -41,17 +42,12 @@ export interface DemoBooking {
 }
 
 interface PlatformContextType {
-  wishlist: string[];
-  toggleWishlist: (packageId: string) => void;
-  isInWishlist: (packageId: string) => boolean;
   compareList: string[];
   toggleCompare: (packageId: string) => void;
   clearCompare: () => void;
   bookings: DemoBooking[];
   addBooking: (data: Omit<DemoBooking, "id" | "referenceCode" | "createdAt" | "status" | "paidAmount">) => DemoBooking;
   updateBookingStatus: (id: string, status: BookingStatus) => void;
-  notifications: PlatformNotification[];
-  markNotificationAsRead: (id: string) => void;
   bookingModalPackage: TourPackage | null;
   openBookingModal: (pkg: TourPackage) => void;
   closeBookingModal: () => void;
@@ -95,10 +91,9 @@ const initialDemoBookings: DemoBooking[] = [
 const PlatformContext = createContext<PlatformContextType | undefined>(undefined);
 
 export function PlatformProvider({ children }: { children: React.ReactNode }) {
-  const [wishlist, setWishlist] = useState<string[]>([]);
+  const { addNotification } = useNavbarState();
   const [compareList, setCompareList] = useState<string[]>([]);
   const [bookings, setBookings] = useState<DemoBooking[]>(initialDemoBookings);
-  const [notifications, setNotifications] = useState<PlatformNotification[]>(initialNotifications);
   const [bookingModalPackage, setBookingModalPackage] = useState<TourPackage | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -106,9 +101,6 @@ export function PlatformProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       try {
-        const savedWishlist = localStorage.getItem("shoccho_wishlist");
-        if (savedWishlist) setWishlist(JSON.parse(savedWishlist));
-
         const savedCompare = localStorage.getItem("shoccho_compare");
         if (savedCompare) setCompareList(JSON.parse(savedCompare));
 
@@ -120,8 +112,6 @@ export function PlatformProvider({ children }: { children: React.ReactNode }) {
           }
         }
 
-        const savedNotifications = localStorage.getItem("shoccho_notifications");
-        if (savedNotifications) setNotifications(JSON.parse(savedNotifications));
       } catch {
         // ignore storage errors
       }
@@ -131,13 +121,6 @@ export function PlatformProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   // Save changes to localStorage
-  useEffect(() => {
-    if (!isLoaded) return;
-    try {
-      localStorage.setItem("shoccho_wishlist", JSON.stringify(wishlist));
-    } catch {}
-  }, [wishlist, isLoaded]);
-
   useEffect(() => {
     if (!isLoaded) return;
     try {
@@ -151,21 +134,6 @@ export function PlatformProvider({ children }: { children: React.ReactNode }) {
       localStorage.setItem("shoccho_bookings", JSON.stringify(bookings));
     } catch {}
   }, [bookings, isLoaded]);
-
-  useEffect(() => {
-    if (!isLoaded) return;
-    try {
-      localStorage.setItem("shoccho_notifications", JSON.stringify(notifications));
-    } catch {}
-  }, [notifications, isLoaded]);
-
-  const toggleWishlist = (packageId: string) => {
-    setWishlist((prev) =>
-      prev.includes(packageId) ? prev.filter((id) => id !== packageId) : [...prev, packageId]
-    );
-  };
-
-  const isInWishlist = (packageId: string) => wishlist.includes(packageId);
 
   const toggleCompare = (packageId: string) => {
     setCompareList((prev) => {
@@ -205,7 +173,7 @@ export function PlatformProvider({ children }: { children: React.ReactNode }) {
       isRead: false,
       link: "/dashboard",
     };
-    setNotifications((prev) => [newNotif, ...prev]);
+    addNotification(newNotif);
 
     return newBooking;
   };
@@ -216,29 +184,18 @@ export function PlatformProvider({ children }: { children: React.ReactNode }) {
     );
   };
 
-  const markNotificationAsRead = (id: string) => {
-    setNotifications((prev) =>
-      prev.map((n) => (n.id === id ? { ...n, isRead: true } : n))
-    );
-  };
-
   const openBookingModal = (pkg: TourPackage) => setBookingModalPackage(pkg);
   const closeBookingModal = () => setBookingModalPackage(null);
 
   return (
     <PlatformContext.Provider
       value={{
-        wishlist,
-        toggleWishlist,
-        isInWishlist,
         compareList,
         toggleCompare,
         clearCompare,
         bookings,
         addBooking,
         updateBookingStatus,
-        notifications,
-        markNotificationAsRead,
         bookingModalPackage,
         openBookingModal,
         closeBookingModal,

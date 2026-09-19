@@ -9,10 +9,12 @@ import { MobileStickyBar } from "@/components/navigation/MobileStickyBar";
 import { packagesData } from "@/data/packages";
 import { muallimsData } from "@/data/muallims";
 import { usePlatform } from "@/context/PlatformContext";
+import { useNavbarState } from "@/context/NavbarStateContext";
 
 export default function PackageDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
-  const { wishlist, toggleWishlist, openBookingModal } = usePlatform();
+  const { openBookingModal } = usePlatform();
+  const { wishlist, toggleWishlist } = useNavbarState();
   const [activeTab, setActiveTab] = useState<"overview" | "itinerary" | "hotels" | "inclusions" | "reviews">("overview");
 
   const pkg = packagesData.find((p) => p.id === resolvedParams.id) || packagesData[0];

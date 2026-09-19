@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 };
 
 import { PlatformProvider } from "@/context/PlatformContext";
+import { NavbarStateProvider } from "@/context/NavbarStateContext";
 import { BookingFlowModal } from "@/components/booking/BookingFlowModal";
 import { PackageCompareDrawer } from "@/components/comparison/PackageCompareDrawer";
 
@@ -50,11 +51,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-surface font-body text-on-surface antialiased overflow-x-hidden">
-        <PlatformProvider>
-          {children}
-          <BookingFlowModal />
-          <PackageCompareDrawer />
-        </PlatformProvider>
+        <NavbarStateProvider>
+          <PlatformProvider>
+            {children}
+            <BookingFlowModal />
+            <PackageCompareDrawer />
+          </PlatformProvider>
+        </NavbarStateProvider>
       </body>
     </html>
   );

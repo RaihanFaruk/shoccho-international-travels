@@ -3,7 +3,11 @@ export interface Muallim {
   name: string;
   nameEn: string;
   title: string;
+  /** Empty string = render monogram crest instead */
   photoUrl: string;
+  /** Empty string = monogram initial to render */
+  monogram: string;
+  isSampleSlot: boolean;
   experienceYears: number;
   hajjCount: number;
   umrahCount: number;
@@ -13,18 +17,23 @@ export interface Muallim {
   education: string;
   specialties: string[];
   bio: string;
-  verificationLevel: "Shoccho Master Muallim" | "Ministry Certified" | "Verified Scholar";
+  verificationLevel: "Shoccho Master Muallim" | "Ministry Certified" | "Verified Scholar" | "Pending Verification";
   upcomingBatches: { batchName: string; departureDate: string; packageId: string }[];
   reviews: { id: string; author: string; year: string; rating: number; text: string }[];
 }
 
 export const muallimsData: Muallim[] = [
+  // ─── REAL PROFILE ───────────────────────────────────────────────────────────
+  // হাফেজ মাওলানা মোঃ ফজল রাব্বি is the real, named founder.
+  // Monogram crest used — no stock/AI photo under a named real person.
   {
     id: "muallim-1",
     name: "হাফেজ মাওলানা মোঃ ফজল রাব্বি",
     nameEn: "Hafez Mawlana Md. Fazle Rabbi",
     title: "প্রধান মোয়াল্লিম ও চেয়ারম্যান",
-    photoUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    photoUrl: "",
+    monogram: "ফ",
+    isSampleSlot: false,
     experienceYears: 14,
     hajjCount: 9,
     umrahCount: 48,
@@ -37,7 +46,7 @@ export const muallimsData: Muallim[] = [
     verificationLevel: "Shoccho Master Muallim",
     upcomingBatches: [
       { batchName: "১৫ রমজান ভিআইপি ওমরাহ কাফেলা", departureDate: "২০ মার্চ ২০২৬", packageId: "pkg-umrah-ramadan" },
-      { batchName: "হজ্জ ২০২৬ প্রিমিয়াম এক্সিকিউটিভ গ্রুপ", departureDate: "২০ মে ২০২৬", packageId: "pkg-hajj-executive" },
+      { batchName: "হজ্জ ২০২৬ প্রিমিয়াম এক্সিকিউটিভ গ্রুপ", departureDate: "২০ মে ২০২৬", packageId: "pkg-hajj-executive" },
     ],
     reviews: [
       {
@@ -45,74 +54,68 @@ export const muallimsData: Muallim[] = [
         author: "হাজী মোস্তাক আহমেদ",
         year: "ওমরাহ ২০২৫",
         rating: 5,
-        text: "হুজুরের সান্নিধ্যে আমাদের পুরো সফরটা অসাধারণ কেটেছে। তাওয়াফ এবং সাঈ-এর সময় প্রতিটি দোয়া অত্যন্ত সহজ ভাষায় বুঝিয়ে দিয়েছেন।",
+        text: "হুজুরের সান্নিধ্যে আমাদের পুরো সফরটা অসাধারণ কেটেছে। তাওয়াফ এবং সাঈ-এর সময় প্রতিটি দোয়া অত্যন্ত সহজ ভাষায় বুঝিয়ে দিয়েছেন।",
       },
       {
         id: "rev-2",
         author: "অধ্যাপক মোঃ শহিদুল্লাহ",
         year: "হজ্জ ২০২৪",
         rating: 5,
-        text: "মিনায় চরম ভিড়ের মাঝেও উনি যেভাবে আমাদের বয়স্ক সঙ্গীদের শান্ত রেখেছেন এবং পাথর নিক্ষেপের সঠিক সময় গাইড করেছেন তা প্রশংসনীয়।",
+        text: "মিনায় চরম ভিড়ের মাঝেও উনি যেভাবে আমাদের বয়স্ক সঙ্গীদের শান্ত রেখেছেন এবং পাথর নিক্ষেপের সঠিক সময় গাইড করেছেন তা প্রশংসনীয়।",
       },
     ],
   },
+
+  // ─── SAMPLE SLOTS ───────────────────────────────────────────────────────────
+  // These two profiles are placeholder slots for future verified muallims.
+  // isSampleSlot: true → the UI renders a "নমুনা স্লট" badge instead of
+  // a verified badge, shows no rating/reviews, and uses a monogram avatar.
+  // Stock photos and fabricated Islamic credentials (Madinah University,
+  // Al-Azhar) have been removed — they could misrepresent real institutions.
   {
     id: "muallim-2",
-    name: "মুফতি আব্দুল্লাহ আল-মাহমুদ",
-    nameEn: "Mufti Abdullah Al-Mahmud",
-    title: "সিনিয়র মোয়াল্লিম ও ফিকহ গবেষক",
-    photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-    experienceYears: 10,
-    hajjCount: 6,
-    umrahCount: 32,
-    rating: 4.94,
-    reviewCount: 124,
+    name: "আলেম প্রোফাইল — অনবোর্ডিং প্রক্রিয়াধীন",
+    nameEn: "Scholar Profile — Pending Verified Onboarding",
+    title: "সিনিয়র মোয়াল্লিম (নমুনা স্লট)",
+    photoUrl: "",
+    monogram: "আ",
+    isSampleSlot: true,
+    experienceYears: 0,
+    hajjCount: 0,
+    umrahCount: 0,
+    rating: 0,
+    reviewCount: 0,
     languages: ["বাংলা", "আরবি", "ইংরেজি"],
-    education: "মদিনা ইসলামিক বিশ্ববিদ্যালয় (বিএ অনার্স ইন হাদিস স্টাডিজ), দারুল উলুম হাটহাজারী (ইফতা)",
-    specialties: ["মহিলা হাজীদের বিশেষ মাসায়েল", "মদিনা মুনাওয়ারার ঐতিহাসিক স্থানসমূহ", "ইহরামের আধুনিক সমাধান"],
-    bio: "মদিনা ইসলামিক বিশ্ববিদ্যালয় থেকে শিক্ষাপ্রাপ্ত মুফতি আব্দুল্লাহ সমসাময়িক ফিকহি প্রশ্নের নিখুঁত সমাধানে অত্যন্ত পারদর্শী।",
-    verificationLevel: "Ministry Certified",
+    education: "তথ্য সংযুক্ত হবে — লঞ্চের পর যাচাইকৃত প্রোফাইল প্রদর্শিত হবে",
+    specialties: ["মহিলা হাজীদের বিশেষ মাসায়েল", "মদিনা মুনাওয়ারার ঐতিহাসিক স্থানসমূহ", "ইহরামের আধুনিক সমাধান"],
+    bio: "এই স্লটটি একটি নমুনা প্রোফাইল। অফিশিয়াল লঞ্চের পর সম্মতিপ্রাপ্ত ও যাচাইকৃত মোয়াল্লিমদের প্রকৃত তথ্য এখানে প্রকাশিত হবে।",
+    verificationLevel: "Pending Verification",
     upcomingBatches: [
-      { batchName: "শাবান ওমরাহ কাফেলা", departureDate: "২৮ ফেব্রুয়ারি ২০২৬", packageId: "pkg-umrah-deluxe" },
-      { batchName: "পোস্ট-ঈদ ওমরাহ রিট্রিট", departureDate: "১৫ এপ্রিল ২০২৬", packageId: "pkg-umrah-budget" },
+      { batchName: "শাবান ওমরাহ কাফেলা", departureDate: "২৮ ফেব্রুয়ারি ২০২৬", packageId: "pkg-umrah-deluxe" },
     ],
-    reviews: [
-      {
-        id: "rev-3",
-        author: "ফারহানা সুলতানা",
-        year: "ওমরাহ ২০২৫",
-        rating: 5,
-        text: "মহিলাদের জন্য ইহরাম ও রওজা শরীফ জেয়ারতের নিয়মাবলী খুব সুন্দর ও সাবলীলভাবে বুঝিয়ে দিয়েছিলেন মুফতি সাহেব।",
-      },
-    ],
+    reviews: [],
   },
   {
     id: "muallim-3",
-    name: "মাওলানা ক্বারী নুরুল ইসলাম",
-    nameEn: "Mawlana Qari Nurul Islam",
-    title: "জিয়ারত স্পেশালিস্ট ও ক্বারী",
-    photoUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
-    experienceYears: 8,
-    hajjCount: 4,
-    umrahCount: 22,
-    rating: 4.89,
-    reviewCount: 95,
+    name: "আলেম প্রোফাইল — অনবোর্ডিং প্রক্রিয়াধীন",
+    nameEn: "Scholar Profile — Pending Verified Onboarding",
+    title: "জিয়ারত স্পেশালিস্ট ও ক্বারী (নমুনা স্লট)",
+    photoUrl: "",
+    monogram: "ক",
+    isSampleSlot: true,
+    experienceYears: 0,
+    hajjCount: 0,
+    umrahCount: 0,
+    rating: 0,
+    reviewCount: 0,
     languages: ["বাংলা", "আরবি"],
-    education: "আল-আজহার বিশ্ববিদ্যালয় ট্রেনিং কোর্স সম্পন্ন, জামিয়া কুরআনিয়া লালবাগ",
-    specialties: ["মক্কা ও তায়েফের সিরাত জার্নি", "কোরআন তেলাওয়াত ও দোয়ার মহড়া", "বদরের প্রান্তর সফর"],
-    bio: "মক্কা ও মদিনার প্রতিটি ঐতিহাসিক অলিতে-গলিতে রাসুলুল্লাহ (সাঃ) এর স্মৃতি বিজড়িত স্থানগুলোর সচিত্র ইতিহাস বয়ানে তিনি অতুলনীয়।",
-    verificationLevel: "Verified Scholar",
+    education: "তথ্য সংযুক্ত হবে — লঞ্চের পর যাচাইকৃত প্রোফাইল প্রদর্শিত হবে",
+    specialties: ["মক্কা ও তায়েফের সিরাত জার্নি", "কোরআন তেলাওয়াত ও দোয়ার মহড়া", "বদরের প্রান্তর সফর"],
+    bio: "এই স্লটটি একটি নমুনা প্রোফাইল। অফিশিয়াল লঞ্চের পর সম্মতিপ্রাপ্ত ও যাচাইকৃত মোয়াল্লিমদের প্রকৃত তথ্য এখানে প্রকাশিত হবে।",
+    verificationLevel: "Pending Verification",
     upcomingBatches: [
-      { batchName: "রজব-শাবান কম্বো ওমরাহ", departureDate: "১২ ফেব্রুয়ারি ২০২৬", packageId: "pkg-umrah-standard" },
+      { batchName: "রজব-শাবান কম্বো ওমরাহ", departureDate: "১২ ফেব্রুয়ারি ২০২৬", packageId: "pkg-umrah-standard" },
     ],
-    reviews: [
-      {
-        id: "rev-4",
-        author: "ডাঃ রফিকুল হাসান",
-        year: "ওমরাহ ২০২৪",
-        rating: 5,
-        text: "তায়েফের ঐতিহাসিক স্থানে হুজুরের বয়ান শুনে চোখে পানি ধরে রাখা যায়নি। অত্যন্ত আবেগময় ও শিক্ষণীয় সফর ছিল।",
-      },
-    ],
+    reviews: [],
   },
 ];

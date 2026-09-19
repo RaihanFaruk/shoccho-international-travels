@@ -8,11 +8,13 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileStickyBar } from "@/components/navigation/MobileStickyBar";
 import { packagesData } from "@/data/packages";
 import { usePlatform } from "@/context/PlatformContext";
+import { useNavbarState } from "@/context/NavbarStateContext";
 
 type CategoryFilter = "all" | "umrah" | "hajj" | "international" | "domestic";
 
 export default function PackagesPage() {
-  const { wishlist, toggleWishlist, compareList, toggleCompare, openBookingModal } = usePlatform();
+  const { compareList, toggleCompare, openBookingModal } = usePlatform();
+  const { wishlist, toggleWishlist } = useNavbarState();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>("all");
   const [sortBy, setSortBy] = useState<"featured" | "price_low" | "price_high" | "duration">("featured");

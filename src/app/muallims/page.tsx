@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -49,10 +48,10 @@ export default function MuallimsPage() {
 
           {/* Header Banner */}
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ffffff] text-[#735c00] border border-[#dbe5e0] font-label-sm text-xs rounded-full font-bold uppercase tracking-wider mb-4 shadow-sm">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#ffffff] text-[#735c00] border border-[#dbe5e0] font-label-sm text-xs rounded-full font-bold uppercase tracking-wider mb-4 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#735c00]" />
-              <span>VERIFIED SCHOLAR DIRECTORY &bull; ফেজ-১ ডিরেক্টরি প্রিভিউ</span>
-            </div>
+              <span>ফেজ-১ ডিরেক্টরি • ১ জন যাচাইকৃত স্কলার + ২টি আসন্ন স্লট</span>
+            </span>
             <h1 className="font-headline-lg text-3xl sm:text-4xl lg:text-5xl text-[#00453d] font-serif font-bold tracking-tight mb-4">
               স্বচ্ছ ভেরিফাইড মোয়াল্লিম ও আলেম প্যানেল
             </h1>
@@ -139,55 +138,76 @@ export default function MuallimsPage() {
           <div className="space-y-8 max-w-5xl mx-auto mb-16">
             <div className="flex items-center justify-between">
               <h2 className="font-headline-md text-2xl font-serif font-bold text-[#00453d]">
-                সম্মানিত মোয়াল্লিমবৃন্দ
+                সম্মানিত মোয়াল্লিমবৃন্দ
               </h2>
               <span className="text-xs text-[#735c00] font-semibold bg-[#ffffff] px-3 py-1 rounded-full border border-[#dbe5e0]">
-                {muallimsData.length} জন যাচাইকৃত স্কলার প্রদর্শিত
+                {muallimsData.filter((m) => !m.isSampleSlot).length} জন যাচাইকৃত স্কলার • {muallimsData.filter((m) => m.isSampleSlot).length} টি স্লট শীঘ্রই পূর্ণ হবে
               </span>
             </div>
 
             {muallimsData.map((muallim) => (
               <div
                 key={muallim.id}
-                className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-[#dbe5e0] flex flex-col md:flex-row items-start gap-6 sm:gap-8 hover:shadow-md transition-shadow"
+                className={`bg-white rounded-3xl p-6 sm:p-8 shadow-sm border flex flex-col md:flex-row items-start gap-6 sm:gap-8 transition-shadow ${
+                  muallim.isSampleSlot
+                    ? "border-dashed border-[#bec9c5] opacity-70"
+                    : "border-[#dbe5e0] hover:shadow-md"
+                }`}
               >
                 {/* Scholar Avatar & Badge */}
                 <div className="flex flex-col items-center text-center shrink-0 w-full md:w-56">
-                  {muallim.id === "muallim-1" ? (
-                    <div className="w-32 h-32 rounded-full bg-gradient-to-b from-[#005a50] to-[#003831] border-4 border-[#fed65b] flex items-center justify-center shadow-md mb-3 ring-4 ring-[#735c00]/30 shrink-0">
-                      <span className="font-serif text-5xl font-bold text-[#ffe088] drop-shadow-sm">
-                        ফ
-                      </span>
-                    </div>
-                  ) : (
-                    <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-[#fed65b] shadow-md mb-3">
-                      <Image
-                        src={muallim.photoUrl}
-                        alt={muallim.name}
-                        fill
-                        sizes="128px"
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
-                  <span className="px-3 py-1 bg-[#00453d] text-[#fed65b] font-label-sm text-[11px] font-bold rounded-full shadow-sm mb-1">
-                    ★ {muallim.verificationLevel}
-                  </span>
-                  <div className="flex items-center gap-1 text-[#735c00] text-xs font-bold mt-1">
-                    <span className="material-symbols-outlined text-sm">star</span>
-                    <span>{muallim.rating}</span>
-                    <span className="text-[#3f4946] font-normal">({muallim.reviewCount} টি রিভিউ)</span>
+                  {/* All profiles use monogram — no stock photos under named real people */}
+                  <div
+                    className={`w-32 h-32 rounded-full border-4 flex items-center justify-center shadow-md mb-3 ring-4 shrink-0 ${
+                      muallim.isSampleSlot
+                        ? "bg-[#e0eae5] border-[#bec9c5] ring-[#bec9c5]/20"
+                        : "bg-gradient-to-b from-[#005a50] to-[#003831] border-[#fed65b] ring-[#735c00]/30"
+                    }`}
+                  >
+                    <span
+                      className={`font-serif text-5xl font-bold drop-shadow-sm ${
+                        muallim.isSampleSlot ? "text-[#6f7976]" : "text-[#ffe088]"
+                      }`}
+                    >
+                      {muallim.monogram}
+                    </span>
                   </div>
+
+                  {muallim.isSampleSlot ? (
+                    <span className="px-3 py-1 bg-[#e0eae5] text-[#3f4946] font-label-sm text-[11px] font-bold rounded-full mb-1 border border-[#bec9c5]">
+                      নমুনা স্লট — শীঘ্রই আসছে
+                    </span>
+                  ) : (
+                    <>
+                      <span className="px-3 py-1 bg-[#00453d] text-[#fed65b] font-label-sm text-[11px] font-bold rounded-full shadow-sm mb-1">
+                        ★ {muallim.verificationLevel}
+                      </span>
+                      <div className="flex items-center gap-1 text-[#735c00] text-xs font-bold mt-1">
+                        <span className="material-symbols-outlined text-sm">star</span>
+                        <span>{muallim.rating}</span>
+                        <span className="text-[#3f4946] font-normal">({muallim.reviewCount} টি রিভিউ)</span>
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {/* Info & Credentials */}
                 <div className="flex-1 space-y-4 text-[#141d1a]">
                   <div>
-                    <h3 className="font-headline-md text-xl sm:text-2xl font-serif font-bold text-[#00453d]">
-                      {muallim.name}
-                    </h3>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="font-headline-md text-xl sm:text-2xl font-serif font-bold text-[#00453d]">
+                        {muallim.name}
+                      </h3>
+                      {muallim.isSampleSlot && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-[#ecf6f1] text-[#3f4946] text-[10px] font-semibold rounded border border-[#bec9c5]">
+                          <span className="material-symbols-outlined text-xs">info</span>
+                          নমুনা প্রোফাইল
+                        </span>
+                      )}
+                    </div>
                     <span className="font-label-md text-xs text-[#735c00] font-semibold block mt-0.5">
-                      {muallim.title} • {muallim.experienceYears}+ বছর অভিজ্ঞতা
+                      {muallim.title}
+                      {!muallim.isSampleSlot && ` • ${muallim.experienceYears}+ বছর অভিজ্ঞতা`}
                     </span>
                     <p className="font-body-sm text-xs sm:text-sm text-[#3f4946] mt-2 leading-relaxed">
                       {muallim.bio}
@@ -204,12 +224,14 @@ export default function MuallimsPage() {
                       <span className="text-[#3f4946] block font-medium">ভাষা দক্ষতা:</span>
                       <strong className="text-[#141d1a]">{muallim.languages.join(", ")}</strong>
                     </div>
-                    <div>
-                      <span className="text-[#3f4946] block font-medium">হজ ও ওমরাহ নেতৃত্ব:</span>
-                      <strong className="text-[#141d1a]">
-                        হজ: {muallim.hajjCount} বার | ওমরাহ: {muallim.umrahCount}+ বার
-                      </strong>
-                    </div>
+                    {!muallim.isSampleSlot && (
+                      <div>
+                        <span className="text-[#3f4946] block font-medium">হজ ও ওমরাহ নেতৃত্ব:</span>
+                        <strong className="text-[#141d1a]">
+                          হজ: {muallim.hajjCount} বার | ওমরাহ: {muallim.umrahCount}+ বার
+                        </strong>
+                      </div>
+                    )}
                     <div>
                       <span className="text-[#3f4946] block font-medium">বিশেষত্ব:</span>
                       <strong className="text-[#00453d]">{muallim.specialties.join(" • ")}</strong>
@@ -236,20 +258,28 @@ export default function MuallimsPage() {
 
                   {/* Actions */}
                   <div className="pt-3 border-t border-[#dbe5e0] flex flex-wrap items-center gap-3">
-                    <button
-                      type="button"
-                      onClick={() => handleBookConsultation(muallim)}
-                      className="px-5 py-2.5 bg-[#00453d] hover:bg-[#075e54] text-white font-label-md text-xs font-semibold uppercase tracking-wider rounded-lg shadow-sm transition-all flex items-center gap-1.5"
-                    >
-                      <span className="material-symbols-outlined text-sm text-[#fed65b]">calendar_month</span>
-                      <span>১-অন-১ পরামর্শ বুক করুন</span>
-                    </button>
-                    <Link
-                      href="/hajj-umrah"
-                      className="px-4 py-2.5 border border-[#dbe5e0] hover:bg-[#f2fcf6] text-[#00453d] font-label-md text-xs font-semibold uppercase tracking-wider rounded-lg transition-all"
-                    >
-                      হুজুরের কাফেলা দেখুন
-                    </Link>
+                    {!muallim.isSampleSlot ? (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => handleBookConsultation(muallim)}
+                          className="px-5 py-2.5 bg-[#00453d] hover:bg-[#075e54] text-white font-label-md text-xs font-semibold uppercase tracking-wider rounded-lg shadow-sm transition-all flex items-center gap-1.5"
+                        >
+                          <span className="material-symbols-outlined text-sm text-[#fed65b]">calendar_month</span>
+                          <span>১-অন-১ পরামর্শ বুক করুন</span>
+                        </button>
+                        <Link
+                          href="/hajj-umrah"
+                          className="px-4 py-2.5 border border-[#dbe5e0] hover:bg-[#f2fcf6] text-[#00453d] font-label-md text-xs font-semibold uppercase tracking-wider rounded-lg transition-all"
+                        >
+                          হুজুরের কাফেলা দেখুন
+                        </Link>
+                      </>
+                    ) : (
+                      <span className="text-xs text-[#3f4946] italic">
+                        অফিশিয়াল লঞ্চের পর এই স্লটে যাচাইকৃত মোয়াল্লিমের প্রোফাইল প্রকাশিত হবে।
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

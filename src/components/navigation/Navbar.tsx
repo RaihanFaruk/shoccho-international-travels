@@ -3,275 +3,93 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Bell, ChevronDown, Heart, Menu, Phone, UserCircle, X } from "lucide-react";
 import { QuickInquiryModal } from "@/components/booking/QuickInquiryModal";
-import { usePlatform } from "@/context/PlatformContext";
+import { useNavbarState } from "@/context/NavbarStateContext";
 import { NotificationDropdown } from "@/components/navigation/NotificationDropdown";
+
+const primaryLinks = [
+  ["হোম", "/"],
+  ["প্যাকেজ", "/packages"],
+  ["হজ-ওমরাহ", "/hajj-umrah"],
+  ["ভিসা", "/visa"],
+  ["গন্তব্য", "/destinations"],
+  ["মোয়াল্লিম", "/muallims"],
+] as const;
 
 export function Navbar() {
   const [inquiryOpen, setInquiryOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { wishlist } = usePlatform();
+  const [accountOpen, setAccountOpen] = useState(false);
+  const { wishlist } = useNavbarState();
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff]/95 backdrop-blur-xl shadow-[0_4px_24px_rgba(7,94,84,0.06)] border-b border-[#dbe5e0]/60">
-        {/* Top Utility Bar */}
-        <div className="bg-[#ecf6f1] px-4 sm:px-8 border-b border-[#dbe5e0]/50">
-          <div className="max-w-7xl mx-auto h-10 flex items-center justify-between text-[#3f4946] font-label-sm text-label-sm">
-            <div className="flex items-center gap-4 sm:gap-6">
-              <div className="flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-sm text-[#735c00]">support_agent</span>
-                <span className="tracking-wider hidden xs:inline">২৪/৭ হেল্পলাইন:</span>
-                <a className="text-[#00453d] font-semibold hover:text-[#075e54] transition-colors" href="tel:01312583165">
-                  01312-583165
-                </a>
-              </div>
-              <div className="hidden md:flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-sm text-[#00453d]">chat</span>
-                <a className="hover:text-[#00453d] transition-colors" href="https://wa.me/8801312583165" target="_blank" rel="noopener noreferrer">
-                  হোয়াটসঅ্যাপ সহায়তা
-                </a>
-              </div>
-              <div className="hidden lg:flex items-center gap-1.5 text-[#3f4946]/80">
-                <span className="material-symbols-outlined text-sm text-[#735c00]">location_on</span>
-                <span>অফিস: জয়তুন প্লাজা, নবীনগর, সাভার</span>
-              </div>
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-[#dbe5e0]/80 bg-white/90 shadow-[0_8px_30px_rgba(0,69,61,0.08)] backdrop-blur-xl">
+        <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center gap-4 px-4 sm:h-20 sm:px-8">
+          <Link className="flex shrink-0 items-center gap-2" href="/" aria-label="Shoccho International Travels home">
+            <div className="relative h-10 w-10 sm:h-11 sm:w-11">
+              <Image src="/images/logo.svg" alt="Shoccho International Travels" fill priority className="object-contain" />
             </div>
-
-            <div className="flex items-center gap-3 sm:gap-4">
-              <div className="inline-flex items-center gap-1 bg-[#ffffff] px-2.5 py-0.5 rounded-full shadow-[0_0_0_1px_rgba(219,229,224,0.6)]">
-                <span className="material-symbols-outlined text-xs text-[#735c00]">verified_user</span>
-                <span className="text-[#735c00] font-semibold text-[10px] sm:text-[11px]">Govt. Approved Partner</span>
-              </div>
-              <div className="flex items-center gap-1.5 pl-2">
-                <button className="text-[#3f4946] hover:text-[#00453d] font-medium transition-colors" type="button">
-                  BDT (৳)
-                </button>
-                <span className="text-[#bec9c5]">|</span>
-                <button className="text-[#00453d] font-semibold" type="button">
-                  বাংলা
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Navbar */}
-        <div className="h-20 max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
-          {/* Brand Logo */}
-          <Link className="flex items-center gap-3 group" href="/">
-            <div className="relative w-10 h-10 shrink-0">
-              <Image
-                src="/images/logo.svg"
-                alt="Shoccho International Travels Brand Logo"
-                fill
-                priority
-                className="object-contain"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl text-[#00453d] font-bold tracking-tight group-hover:text-[#075e54] transition-colors leading-none">
-                স্বচ্ছ ট্রাভেলস
-              </span>
-              <span className="font-sans text-[10px] sm:text-[11px] text-[#735c00] uppercase tracking-wider font-semibold mt-0.5">
-                Shoccho Travels &bull; আপনার আস্থার সফর
-              </span>
-            </div>
+            <span className="hidden font-serif text-lg font-bold tracking-wide text-[#00453d] sm:block">স্বচ্ছ ট্রাভেলস</span>
           </Link>
 
-          {/* Desktop Nav Items */}
-          <nav className="hidden xl:flex items-center gap-1 p-1 bg-[#ecf6f1] rounded-xl">
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/">
-              হোম
-            </Link>
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/about">
-              আমাদের সম্পর্কে
-            </Link>
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/packages">
-              প্যাকেজ সমূহ
-            </Link>
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/hajj-umrah">
-              পবিত্র হজ ও ওমরাহ
-            </Link>
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/visa">
-              ভিসা কনসিয়ার্জ
-            </Link>
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/destinations">
-              গন্তব্য
-            </Link>
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/muallims">
-              মোয়াল্লিম ডিরেক্টরি
-            </Link>
-            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/community">
-              কমিউনিটি
-            </Link>
+          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 xl:flex" aria-label="Primary navigation">
+            {primaryLinks.map(([label, href]) => (
+              <Link key={href} href={href} className="rounded-lg px-3 py-2 text-sm font-semibold text-[#3f4946] transition hover:bg-[#ecf6f1] hover:text-[#00453d]">
+                {label}
+              </Link>
+            ))}
           </nav>
 
-          {/* Right Controls */}
-          <div className="flex items-center gap-2 sm:gap-2.5">
-            {/* Wishlist Link with Live Badge */}
-            <Link
-              href="/dashboard#wishlist"
-              className="relative p-2 rounded-full hover:bg-black/5 text-[#3f4946] hover:text-[#00453d] transition-colors flex items-center justify-center"
-              title="সংরক্ষিত প্যাকেজ (উইশলিস্ট)"
-            >
-              <span className="material-symbols-outlined text-xl">favorite</span>
-              {wishlist.length > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-[#735c00] text-white text-[10px] font-bold flex items-center justify-center">
-                  {wishlist.length}
-                </span>
-              )}
+          <div className="ml-auto flex shrink-0 items-center gap-1 sm:gap-2">
+            <a href="tel:01312583165" className="hidden h-11 items-center gap-2 rounded-full px-2 text-sm font-semibold text-[#00453d] transition hover:bg-[#ecf6f1] lg:inline-flex" aria-label="Call Shoccho Travels">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#ecf6f1] shadow-sm"><Phone aria-hidden="true" className="h-4 w-4" /></span>
+              <span>01312-583165</span>
+            </a>
+            <Link href="/dashboard#wishlist" className="relative inline-flex h-11 w-11 items-center justify-center rounded-full text-[#3f4946] transition hover:bg-[#ecf6f1] hover:text-[#00453d]" aria-label="সংরক্ষিত প্যাকেজ">
+              <Heart aria-hidden="true" className="h-5 w-5" strokeWidth={1.8} />
+              {wishlist.length > 0 && <span className="absolute right-0.5 top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#735c00] text-[10px] font-bold text-white">{wishlist.length}</span>}
             </Link>
-
-            {/* Notification Bell Dropdown */}
             <NotificationDropdown />
-
-            {/* Profile Chip linking to Dashboard */}
-            <Link
-              href="/dashboard"
-              className="hidden sm:flex items-center gap-2 pl-1 py-1 pr-3 rounded-full bg-[#ecf6f1] hover:bg-[#dbe5e0] shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#dbe5e0]/60 transition-all group"
-            >
-              <div className="w-8 h-8 rounded-full bg-[#00453d] text-[#ffe088] font-bold text-xs flex items-center justify-center ring-2 ring-[#fed65b] shrink-0 font-serif">
-                তা
-              </div>
-              <div className="flex flex-col text-left">
-                <span className="font-label-md text-[11px] text-[#141d1a] font-semibold leading-tight group-hover:text-[#00453d]">
-                  তানভীর আহমেদ
-                </span>
-                <div className="flex items-center gap-1">
-                  <span className="material-symbols-outlined text-[11px] text-[#735c00]">workspace_premium</span>
-                  <span className="font-label-sm text-[9px] text-[#735c00] font-bold tracking-wider">ড্যাশবোর্ড</span>
+            <div className="relative hidden sm:block">
+              <button type="button" onClick={() => setAccountOpen((open) => !open)} className="inline-flex h-11 w-11 items-center justify-center rounded-full text-[#00453d] transition hover:bg-[#ecf6f1]" aria-label="অ্যাকাউন্ট মেনু" aria-expanded={accountOpen}>
+                <UserCircle aria-hidden="true" className="h-6 w-6" strokeWidth={1.7} />
+              </button>
+              {accountOpen && (
+                <div className="absolute right-0 top-14 w-48 rounded-xl border border-[#dbe5e0] bg-white p-2 shadow-xl">
+                  <Link href="/dashboard" className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold text-[#3f4946] hover:bg-[#ecf6f1]">ড্যাশবোর্ড <ChevronDown className="h-4 w-4 -rotate-90" /></Link>
+                  <Link href="/community" className="flex items-center justify-between rounded-lg px-3 py-2 text-sm text-[#3f4946] hover:bg-[#ecf6f1]">কমিউনিটি <ChevronDown className="h-4 w-4 -rotate-90" /></Link>
                 </div>
-              </div>
-            </Link>
-
-            {/* Booking Concierge Button */}
-            <button
-              type="button"
-              onClick={() => setInquiryOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 bg-[#00453d] hover:bg-[#075e54] text-white font-label-md text-xs uppercase tracking-wider rounded-lg shadow-sm transition-all"
-            >
-              <span className="material-symbols-outlined text-sm">flight_takeoff</span>
-              <span className="hidden md:inline">কনসিয়ার্জ</span>
+              )}
+            </div>
+            <button type="button" onClick={() => setInquiryOpen(true)} className="hidden h-11 items-center gap-2 rounded-lg bg-[#00453d] px-4 text-sm font-bold text-white shadow-[0_8px_18px_rgba(0,69,61,0.18)] transition hover:-translate-y-0.5 hover:bg-[#075e54] md:inline-flex">
+              <Bell aria-hidden="true" className="h-4 w-4" />
+              কনসিয়ার্জ
             </button>
-
-            {/* Mobile Hamburger Toggle */}
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 rounded-lg text-[#141d1a] hover:bg-[#ecf6f1]"
-              aria-label="Toggle Navigation"
-            >
-              <span className="material-symbols-outlined text-2xl">
-                {mobileMenuOpen ? "close" : "menu"}
-              </span>
+            <button type="button" onClick={() => setMobileMenuOpen((open) => !open)} className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#141d1a] transition hover:bg-[#ecf6f1] xl:hidden" aria-label="Toggle Navigation">
+              {mobileMenuOpen ? <X aria-hidden="true" className="h-6 w-6" /> : <Menu aria-hidden="true" className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="xl:hidden bg-white/98 border-t border-[#dbe5e0] px-6 py-5 space-y-3 animate-in slide-in-from-top-2 duration-200 text-[#141d1a]">
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/"
-              className="block py-2 text-sm font-semibold text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              হোম পেজ
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/about"
-              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              আমাদের সম্পর্কে ও ভিশন-মিশন
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/packages"
-              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              প্যাকেজ সমূহ
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/hajj-umrah"
-              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              পবিত্র হজ ও ওমরাহ
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/visa"
-              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              ভিসা কনসিয়ার্জ
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/destinations"
-              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              জনপ্রিয় গন্তব্য
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/muallims"
-              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              মোয়াল্লিম ডিরেক্টরি
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/community"
-              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
-            >
-              কমিউনিটি ও ভ্রমণ কাহিনি
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/dashboard"
-              className="block py-2 text-sm font-semibold text-[#735c00] border-b border-[#ecf6f1] flex items-center justify-between"
-            >
-              <span>আমার ড্যাশবোর্ড</span>
-              <span className="material-symbols-outlined text-sm">account_circle</span>
-            </Link>
-            <Link
-              onClick={() => setMobileMenuOpen(false)}
-              href="/admin"
-              className="block py-2 text-xs font-semibold text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1] flex items-center justify-between"
-            >
-              <span>এডমিন ব্যাক-অফিস (ডেমো)</span>
-              <span className="material-symbols-outlined text-sm">admin_panel_settings</span>
-            </Link>
-
-            <div className="pt-3 border-t border-[#dbe5e0] flex items-center justify-between">
-              <a
-                href="tel:01312583165"
-                className="flex items-center gap-1 text-xs font-semibold text-[#00453d]"
-              >
-                <span className="material-symbols-outlined text-sm text-[#735c00]">call</span>
-                <span>01312-583165</span>
-              </a>
-              <a
-                href="https://wa.me/8801312583165"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 bg-[#ecf6f1] text-[#00453d] font-semibold text-xs rounded-lg border border-[#bec9c5]/60"
-              >
-                WhatsApp
-              </a>
+          <div className="border-t border-[#dbe5e0] bg-white px-5 py-5 shadow-xl xl:hidden">
+            <nav className="grid gap-1" aria-label="Mobile navigation">
+              {primaryLinks.map(([label, href]) => (
+                <Link key={href} onClick={() => setMobileMenuOpen(false)} href={href} className="rounded-lg border-b border-[#ecf6f1] px-2 py-3 text-sm font-semibold text-[#3f4946] hover:text-[#00453d]">{label}</Link>
+              ))}
+              <Link onClick={() => setMobileMenuOpen(false)} href="/community" className="rounded-lg border-b border-[#ecf6f1] px-2 py-3 text-sm font-semibold text-[#3f4946]">কমিউনিটি ও ভ্রমণ কাহিনি</Link>
+              <Link onClick={() => setMobileMenuOpen(false)} href="/dashboard" className="rounded-lg border-b border-[#ecf6f1] px-2 py-3 text-sm font-semibold text-[#735c00]">আমার ড্যাশবোর্ড</Link>
+            </nav>
+            <div className="mt-4 flex items-center justify-between border-t border-[#dbe5e0] pt-4">
+              <a href="tel:01312583165" className="inline-flex items-center gap-2 text-sm font-semibold text-[#00453d]"><Phone className="h-4 w-4" />01312-583165</a>
+              <button type="button" onClick={() => { setMobileMenuOpen(false); setInquiryOpen(true); }} className="rounded-lg bg-[#00453d] px-4 py-2 text-sm font-bold text-white">কনসিয়ার্জ</button>
             </div>
           </div>
         )}
       </header>
-
-      <QuickInquiryModal
-        isOpen={inquiryOpen}
-        onClose={() => setInquiryOpen(false)}
-        defaultTitle="বুকিং কনসিয়ার্জ পরামর্শ"
-        defaultCategory="কাস্টম কনসিয়ার্জ"
-      />
+      <QuickInquiryModal isOpen={inquiryOpen} onClose={() => setInquiryOpen(false)} defaultTitle="বুকিং কনসিয়ার্জ পরামর্শ" defaultCategory="কাস্টম কনসিয়ার্জ" />
     </>
   );
 }

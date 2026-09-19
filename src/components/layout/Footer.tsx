@@ -51,6 +51,15 @@ export function Footer() {
             <ul className="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
               <li>
                 <Link
+                  className="hover:text-primary transition-colors flex items-center gap-1.5 text-primary font-medium"
+                  href="/about"
+                >
+                  <span className="material-symbols-outlined text-xs text-secondary">arrow_forward</span>
+                  আমাদের সূচনা ও ভিশন-মিশন
+                </Link>
+              </li>
+              <li>
+                <Link
                   className="hover:text-primary transition-colors flex items-center gap-1.5"
                   href="/hajj-umrah"
                 >

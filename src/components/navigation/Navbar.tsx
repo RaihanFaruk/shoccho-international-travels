@@ -84,6 +84,9 @@ export function Navbar() {
             <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/">
               হোম
             </Link>
+            <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/about">
+              আমাদের সম্পর্কে
+            </Link>
             <Link className="px-3 py-2 rounded-lg font-label-md text-label-md text-[#3f4946] hover:text-[#00453d] hover:bg-[#e0eae5] transition-all" href="/packages">
               প্যাকেজ সমূহ
             </Link>
@@ -175,6 +178,13 @@ export function Navbar() {
               className="block py-2 text-sm font-semibold text-[#00453d] border-b border-[#ecf6f1]"
             >
               হোম পেজ
+            </Link>
+            <Link
+              onClick={() => setMobileMenuOpen(false)}
+              href="/about"
+              className="block py-2 text-sm font-medium text-[#3f4946] hover:text-[#00453d] border-b border-[#ecf6f1]"
+            >
+              আমাদের সম্পর্কে ও ভিশন-মিশন
             </Link>
             <Link
               onClick={() => setMobileMenuOpen(false)}

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export function FounderSection() {
   return (
@@ -42,9 +43,18 @@ export function FounderSection() {
                 <blockquote className="font-headline-md text-lg sm:text-2xl text-[#00453d] font-serif font-medium leading-relaxed italic mb-4">
                   &ldquo;ভ্রমণ কেবল স্থান পরিবর্তন নয়; এটি আত্মিক প্রশান্তি ও জীবনের অনন্য অভিজ্ঞতা। আমরা প্রতিটি সম্মানিত যাত্রীকে পরিবারের সদস্যের মতো শ্রদ্ধা, যত্ন ও শতভাগ স্বচ্ছতার সাথে সেবা দিতে দায়বদ্ধ।&rdquo;
                 </blockquote>
-                <p className="font-body-md text-sm sm:text-base text-[#3f4946] leading-relaxed">
+                <p className="font-body-md text-sm sm:text-base text-[#3f4946] leading-relaxed mb-4">
                   স্বচ্ছ ইন্টারন্যাশনাল ট্রাভেলস প্রতিষ্ঠিত হয়েছে এমন এক প্রত্যয় নিয়ে—যেখানে হজ ও ওমরাহ যাত্রীরা কোনো ধরনের প্রতারণা বা লুকোচুরির শিকার হবেন না। আমরা প্রতিশ্রুতির চেয়ে বেশি সেবা প্রদানের মাধ্যমে দেশের লক্ষাধিক ধর্মপ্রাণ মানুষের হৃদয়ে বিশ্বাস অর্জন করেছি।
                 </p>
+                <div>
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#00453d] hover:text-[#735c00] transition-colors group"
+                  >
+                    <span>আমাদের সূচনা গল্প, ভিশন ও পূর্ণাঙ্গ মিশন পড়ুন</span>
+                    <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+                  </Link>
+                </div>
               </div>
 
               <div className="pt-4 border-t border-[#bec9c5]/40 flex flex-wrap items-center justify-between gap-4">

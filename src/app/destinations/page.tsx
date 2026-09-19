@@ -29,7 +29,7 @@ const destinations: RichDestination[] = [
     countryBn: "সৌদি আরব",
     region: "middle_east",
     description: "বিশ্ব মুসলিমের প্রাণের স্পন্দন। কাবা প্রাঙ্গণে তাওয়াফ, মসজিদে নববীতে রওজা শরিফ জেয়ারত ও ঐতিহাসিক বদর-ওহুদের প্রান্তর দর্শন।",
-    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIq9eSujUJd82ffTYoElFBw0zOYRJogMo09ClqHngcpBl-S645omjyJEWNgiDTVmzr-suJrx8hcvSKutW7w0DgvB1uabi3WAmDlaQnvVGXW58MilHMrpwV-ZyI2RfVTZbt1RMxnxLTHiy35PEwc67op8luh4F0EAKQY6RxAdXIEhG-4cqCgpXmrDYpIeVRjGmO7fIyZA9QGl6txdNLgFmT-AwsHHiV3GZiO52DMFxAgkikQbnD7SIp",
+    imageUrl: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
     popularFor: ["পবিত্র ওমরাহ", "হজ কাফেলা", "রওজা শরিফ জেয়ারত", "জাবালে নূর"],
     startingPriceBn: "৳ ১,১৫,০০০+",
     featured: true,

@@ -12,7 +12,7 @@ export function FounderSection() {
             <div className="lg:col-span-5 relative">
               <div className="relative w-full h-[360px] sm:h-[420px] rounded-xl overflow-hidden shadow-lg border border-[#dbe5e0]">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoZRZEbboXmNVt3p-qimGoOwlDRkg_PJugYYY1Vu4RmhmgouHm3v0Nrzba5Uq7q7vEQPBoukLxg5LCyvoBCC80x5n400Y3CdmZQupEKlZ-2a7XlsXQMdEK7MvoBp83bTQnFhqb-fYgY9aVsX7Upa5_K7aK9rI8MbV2G5DhfeGWXqui5Mqi9864i_eMRZSPZNMNhzEA-zqZrZXlF6JR7R1JcYAUgA6nRObnzcPjc9PZmZZjF1f0SV3u"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
                   alt="হাফেজ মাওলানা মোঃ ফজল রাব্বি - প্রতিষ্ঠাতা ও চেয়ারম্যান"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

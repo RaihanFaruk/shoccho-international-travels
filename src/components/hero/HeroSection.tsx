@@ -75,8 +75,8 @@ export function HeroSection() {
           <div className="lg:col-span-6 relative">
             <div className="relative w-full h-[360px] sm:h-[460px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl bg-[#e6f0eb] border border-[#dbe5e0]/80">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD54UOupip-Sxsiw5kQotYBruHT2_ATrhap_8Jt5SlId1MiyIgtB8Dgzt_6JFb4rzs1Ge6abodBiRuPcXAic3GrxqfZgt8FVxADF_cQmcJ-QpomYp5ysSCx8npjwVr_uagU-DN4QgrRJKDsPvePxgvKNWcdvOSJVJBHeSXOQWeE_aXT8YISswsdUlShsumyxFoAz2erM3RXiKxCgtjozmd8yoszxmMTKVzD8Qqnw5yGUk28Oo6nMwpv"
-                alt="Magnificent panoramic twilight capture of Masjid al-Haram in Makkah with the holy Kaaba surrounded by pilgrims"
+                src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1920&q=80"
+                alt="পবিত্র মক্কার মসজিদুল হারাম ও কাবা শরীফের মনোরম সূর্যাস্তকালীন দৃশ্য"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -41,8 +41,8 @@ export function FeaturedPackages() {
             <div className="lg:col-span-7 bg-[#ecf6f1] rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between group border border-[#dbe5e0]/80">
               <div className="relative h-72 sm:h-96 overflow-hidden">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIq9eSujUJd82ffTYoElFBw0zOYRJogMo09ClqHngcpBl-S645omjyJEWNgiDTVmzr-suJrx8hcvSKutW7w0DgvB1uabi3WAmDlaQnvVGXW58MilHMrpwV-ZyI2RfVTZbt1RMxnxLTHiy35PEwc67op8luh4F0EAKQY6RxAdXIEhG-4cqCgpXmrDYpIeVRjGmO7fIyZA9QGl6txdNLgFmT-AwsHHiV3GZiO52DMFxAgkikQbnD7SIp"
-                  alt="Editorial visual of pilgrims circumambulating the Holy Kaaba in Makkah during dusk"
+                  src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80"
+                  alt="পবিত্র কাবা প্রাঙ্গণে ওমরাহ ও হজ কাফেলার প্রার্থনার দৃশ্য"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -130,8 +130,8 @@ export function FeaturedPackages() {
               >
                 <div className="relative w-32 sm:w-36 h-28 rounded-lg overflow-hidden shrink-0">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJmjhoL_5ERt_YfUDnkqVM9Tnce-TwHcyTx7CQFH-o5XrrzIHtmjE_1rQYWinScrggGTFaCNnkX2e5uuQ34Q7ZOE7eHeIyaOQV0SmK6zNDZY1ZAjv8ajR_D8ycI31JCxqrcsI4khItgDuj6yQ7E3-Bnn02-KC1VUraSJuxEciJ4J3hprCfWdZG2xLL7A8-0obRkWZ1QXP8YfbKAPb_yWsESs-XJhzhO_AJPMHwZh3xgtAiqnqpoOLe"
-                    alt="Blue Mosque in Istanbul"
+                    src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=80"
+                    alt="তুরস্কের ইস্তাম্বুল ব্লু মস্ক ও রাজকীয় স্থাপত্য"
                     fill
                     sizes="(max-width: 640px) 120px, 150px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -167,8 +167,8 @@ export function FeaturedPackages() {
               >
                 <div className="relative w-32 sm:w-36 h-28 rounded-lg overflow-hidden shrink-0">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWef_OdDpZq7jYIhtKbXMKzn-QtvomPuw9MEIDnQjGiyzmJG5KShEw84HlUpVYgAPZKUPAZplsQI01Nj-nXiXdsky1JfUgAJyZ0oi6PO-aBnTxDjT12fD1p9fO4Bt1LWXM5IiLdiGLGqLbUL0VSGI0MLxZTAzIQOEupITwSxJapWyNHKOj7l5_bFr0FUGZ9aJV2dinkwqTkdAxVWUNM1RwjJjvCbriPkPFL8aypR4mAhg0vVWkEoyA"
-                    alt="Maldives Overwater villas"
+                    src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=600&q=80"
+                    alt="মালদ্বীপের ওভারওয়াটার ভিলা ও নীলাভ সমুদ্র"
                     fill
                     sizes="(max-width: 640px) 120px, 150px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -204,8 +204,8 @@ export function FeaturedPackages() {
               >
                 <div className="relative w-32 sm:w-36 h-28 rounded-lg overflow-hidden shrink-0">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYf0alWzzdN8SFO1DVM34XSOXglHWL1oVgjh8pNdayKtzm9aNX5dzeYqnLzst7eSbNP4K2n8qpAqijvx0dOB2lmw1adVHFNnLmRlvVrv8OvF-ftjNrf2nwvgfkfWZQWSrjkKLed9Xn86AmuDcnEycpA0k-p1iD_IG4SYKW5N9j04fNcBI9b2ccT0FSj6C5SaCex0mHw3P3kGMgA-t0ukxnRQjGH5HbnHm4zZl3uTJTOUNvjWEjN5j9"
-                    alt="Dubai Desert Safari"
+                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80"
+                    alt="দুবাই শহরের অনন্য স্কাইলাইন ও ঐতিহ্যবাহী ডেজার্ট সাফারি"
                     fill
                     sizes="(max-width: 640px) 120px, 150px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -10,7 +10,7 @@ export function OfficeLocation() {
             className="w-full h-80 sm:h-96 bg-cover bg-center transition-transform duration-700 hover:scale-105"
             data-location="Joytun Plaza, Kurgaon, Nabinagar, Ashulia, Savar, Dhaka"
             style={{
-              backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-zo-kyoNNTaXHaWAPk-SDbZXyNNyH3gp9DQSODdbGF-U3b0K6DdPRhLp5cBG10oUrQ3IrCvb4t3hJLn8IZVCDCqjzsbASlM8h6sjoyfAgiNKqFVyS85vB5hZaoceD3d-_WQVnmHFbgcDFTMIOMfUImKoIi0gC0W0JWhiOAccdFERu3aOZVpX2M2FCzzoAcCWecPtZyFfKhQxkOmHoKl8BOqAaKQgV887zeCM0FPM8ONyx6UveZioJ')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80')`,
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />

@@ -9,7 +9,7 @@ const articles = [
     title: "ওমরাহ যাওয়ার আগে ১০টি জরুরি প্রস্তুতি যা জানা আবশ্যক",
     desc: "ইহরামের নিয়মাবলী, লাগেজ প্যাকিং চেকলিস্ট এবং প্রয়োজনীয় ঔষধ সংক্রান্ত গুরুত্বপূর্ণ দিকনির্দেশনা।",
     readTime: "৫ মিনিট পাঠ্য • স্বচ্ছ রিসার্চ টিম",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAcJXzZRpb5dHzQfsSHlcQRNUk9pTNVM_JqYA14mclFmy-b6KlR-YJJ4UVdvxfZ9l3xhD0BTiPFOGzBOMjR_wXQDf2zKSDArlHGII30ls8T7mNZQ7PgFqHPi6FeBC9ehEpBXXU3ACwbd7lvdRGrpcboPjqmgk2FAOhojgAUdJmRzLOP8bj0-Bv7Y9SnYWS82x1g6cLTnqCPeJynY2dFouNCaic8DcEVy9xK45TnTe70aBHQ07-PENq6",
+    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
   },
   {
     category: "ভিসা সহায়ক",
@@ -17,7 +17,7 @@ const articles = [
     title: "ভিসা আবেদনের সঠিক নিয়মাবলী ও ডকুমেন্ট চেকলিস্ট",
     desc: "ব্যাংক স্টেটমেন্ট, ট্যাক্স রিটার্ন ও নো অবজেকশন সার্টিফিকেট নির্ভুলভাবে জমা দেওয়ার পদ্ধতি।",
     readTime: "৭ মিনিট পাঠ্য • কনস্যুলার ডেস্ক",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCMwL_DENruWOJBbYeE6DUHW_vaZ3Y6MRgHB-2pF2NyeiBvH9jQXdG3YYdMBF6wn5SJ3eTrXjAZ8LTc3mPxQHx4JFbs3-jFsHzdXt3-hBeBzqFxoILIS91v_xddOpjL-2OOgIJwhzvPFJ70kdkGlzAdkn5KNR6DNAYzTx_XE33SK0wPHHl4SJ5ONXYwtVfBfyDkXmUOWeOrLm58b7mxp5b2AHDOarCEE3_-e1ygBBn331_F9xKbaqyX",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80",
   },
   {
     category: "বাংলাদেশ ট্রাভেল",
@@ -25,7 +25,7 @@ const articles = [
     title: "বাংলাদেশের ৫টি শান্ত ও অনন্য ইকো-রিসোর্ট",
     desc: "ছুটির দিনে কোলাহলমুক্ত পরিবার সময় কাটাতে পাহাড় ও বনাঞ্চলের নির্ভরযোগ্য রিসোর্ট তালিকা।",
     readTime: "৪ মিনিট পাঠ্য • ট্যুর স্পেশালিস্ট",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBWjjXmkCOq8gMCZxHFYr8jfqYYoavhq6ZJxpH2ARwdH0-beGQkDrsRaQQNG286-NeIpvxhmfh2azO0bWMwZAj8JvH8WbGM0sNgIU7iwFhAuhS2gbro7vgEo5NemWsz3Un-BFOsnDDPAAYvk6aZv6tsZEg1iwPdS1YINsECMw4T0Ezo-NaqNCZqNmG8Pl6gGuIc093qMJVn0g5f31cILfJkbcE7ygU1sa6MbwvNsRacy4gRl7tj_ynK",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

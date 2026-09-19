@@ -44,13 +44,8 @@ export default function DashboardPage() {
           <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-[#dbe5e0] mb-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden ring-4 ring-[#fed65b] shadow-md shrink-0">
-                  <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC36FAxz0c7n63fedAedAR9r1icEeVBTt4EZdIESBR6A8E_rjYbMknd8RLrt7hFegTvoknq4U4jKx5X2Ipz-GWIu-Klr4V5aAqX-K7WtbJIuT1w9g63pqbdo2QNPcUnoP6MlPqqMTdQfNxbqGNIgdK0Qz2w1cLMnsWUvDXvcKEXt2GyNGtWkqeheH3hYB72xh2K3wCNooPMpmnqLh33LbZAF_tJWLwG2zJSwdflbraaSynn-49icDtW"
-                    alt="Tanvir Ahmed"
-                    fill
-                    className="object-cover"
-                  />
+                <div className="w-20 h-20 rounded-full bg-[#00453d] text-[#ffe088] font-serif font-bold text-3xl flex items-center justify-center ring-4 ring-[#fed65b] shadow-md shrink-0">
+                  তা
                 </div>
                 <div>
                   <div className="flex items-center justify-center sm:justify-start gap-2">

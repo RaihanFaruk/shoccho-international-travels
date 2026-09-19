@@ -128,13 +128,8 @@ export function Navbar() {
               href="/dashboard"
               className="hidden sm:flex items-center gap-2 pl-1 py-1 pr-3 rounded-full bg-[#ecf6f1] hover:bg-[#dbe5e0] shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-[#dbe5e0]/60 transition-all group"
             >
-              <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-[#fed65b]">
-                <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC36FAxz0c7n63fedAedAR9r1icEeVBTt4EZdIESBR6A8E_rjYbMknd8RLrt7hFegTvoknq4U4jKx5X2Ipz-GWIu-Klr4V5aAqX-K7WtbJIuT1w9g63pqbdo2QNPcUnoP6MlPqqMTdQfNxbqGNIgdK0Qz2w1cLMnsWUvDXvcKEXt2GyNGtWkqeheH3hYB72xh2K3wCNooPMpmnqLh33LbZAF_tJWLwG2zJSwdflbraaSynn-49icDtW"
-                  alt="Profile"
-                  fill
-                  className="object-cover"
-                />
+              <div className="w-8 h-8 rounded-full bg-[#00453d] text-[#ffe088] font-bold text-xs flex items-center justify-center ring-2 ring-[#fed65b] shrink-0 font-serif">
+                তা
               </div>
               <div className="flex flex-col text-left">
                 <span className="font-label-md text-[11px] text-[#141d1a] font-semibold leading-tight group-hover:text-[#00453d]">

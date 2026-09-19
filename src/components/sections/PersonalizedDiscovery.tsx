@@ -12,7 +12,7 @@ const discoveryCards = [
     price: "৳ ১,৮৫,০০০",
     tag: "জনপ্রিয় ওমরাহ",
     tagColor: "text-[#735c00]",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6HiB7WNy60_7IN4MmmWsyK1FtEc-HLX3UNafPUM_JbidlHSQJ7h2Ec7rdC-kZhrecPBxFO368DqjJpuHn4na1AI6BdmX_HfMJX1H1Po8TMCMzGDxAzfc-tH-rJIyVVsYFVSAwCU2JX2UwhoxF4HsAoK6HnzC2nbJYJZUZtsE1_NGFNPmV8YSvIvv8Wd0eg6exw8hJlRIos-e-UCd2zchafnUHPdLboklRAyTCN5-OpFo_1tS8h5vu",
+    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "card-2",
@@ -22,7 +22,7 @@ const discoveryCards = [
     price: "৳ ৬৫,০০০",
     tag: "পরিবার স্পেশাল",
     tagColor: "text-[#00453d]",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDHAst2nwKmdPBycphNevOlpaJ1wiTjGEN3UnIWibhwj0Gk4V74Bxlb-MYxlL_Z-YKN3t0x0wwCwyeEjuqr8ooSg7ltEUXLQCg4UOhppKl1TZ2K9nZfwJYiqgC_ngaVsawF7SNfzMTF3vraJe7n-iEIczB-BHKIsbYMmfpSDIPAyk65PqNmtVzQPobNBDrCGZKgwEYFHr4oJGl3eruM10auURNjYNQIGm7HPPOA0-igSAdFUL6TX7Z9",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "card-3",
@@ -32,7 +32,7 @@ const discoveryCards = [
     price: "৳ ১,১৫,০০০",
     tag: "বাজেট সেভার",
     tagColor: "text-[#6b4f00]",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCG_xZKp_QEHtlTjkJKR9J7ugfWQP9GtoekkioJHUVWqCAXhkcWV2YObVaUSwuvZZuFzXr3VsuXIokLATnNe_PNPUDlEQ_YqP2gqJwHoxt88Nb6xHsCXrJLNCCzICEzjpGxjOlcxNy2s8c9iB0PiD8mwtKBH0DOhhJGxXVE89XRbnXfYFStC91BaOe0HuZcHm5T0Q5Jd3vu2DDSJLyu5qn1p7ugz_DYUbPb42BAhQlATDX-1uv_UEbY",
+    image: "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "card-4",
@@ -42,7 +42,7 @@ const discoveryCards = [
     price: "৳ ৯,৫০০",
     tag: "উইকেন্ড এস্কেপ",
     tagColor: "text-[#00453d]",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCODn940HNGibr542CQQzA_MW1HHdeokAM2O1NZh6OJHRJWnpXMlcWYx0NKNWD_6pcOJ9p2lFkC_nASWKj1Zqi-TdAuGZFO2XLhtv0o-EvvYt9_PFIsnppqadzDyf-Hj6h54lkWIcVVzkVFQkb5LXaWf6n8LzVF6T91r-VMieKK7v4Ym8QElQAnois36ajBAw47xYRgj9LuLPFOr6LMGvgXJS7ysA1EYHQUmRei1nKzQZ34bUtDlr7s",
+    image: "https://images.unsplash.com/photo-1608958435020-e8a7109ba809?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "card-5",
@@ -52,7 +52,7 @@ const discoveryCards = [
     price: "৳ ৯৫,০০০",
     tag: "লাক্সারি রয়েল",
     tagColor: "text-[#735c00]",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZTjGOT1a9TnX5wkuiB605C1-ocW5eW8fHA81QsniOOo3E_uNamuICq8oyFR6lGOU11nyjfhnVdlTV_NfWk7tSBs0JzeuwtDtNPWKsvyz0Z_acFWoY0kZGvRw7vvycu1JUbzhU0jPLD3T_qDHuagPYtksZFHzmNzk4K7DwLV6GQ4-RMSYA4oQujDF24nkcNmc8fh7W9CmRy_axdTfQKQr13cxsew3O7ix03011Oa0bwwErRYUIhBPP",
+    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80",
   },
 ];
 

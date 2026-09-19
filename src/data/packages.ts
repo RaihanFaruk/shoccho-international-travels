@@ -54,7 +54,7 @@ export const packagesData: TourPackage[] = [
     priceBn: "৳ ১,৭৫,০০০",
     currency: "BDT",
     badge: "ফ্ল্যাগশিপ কাফেলা",
-    imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIq9eSujUJd82ffTYoElFBw0zOYRJogMo09ClqHngcpBl-S645omjyJEWNgiDTVmzr-suJrx8hcvSKutW7w0DgvB1uabi3WAmDlaQnvVGXW58MilHMrpwV-ZyI2RfVTZbt1RMxnxLTHiy35PEwc67op8luh4F0EAKQY6RxAdXIEhG-4cqCgpXmrDYpIeVRjGmO7fIyZA9QGl6txdNLgFmT-AwsHHiV3GZiO52DMFxAgkikQbnD7SIp",
+    imageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80",
     galleryUrls: [
       "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",

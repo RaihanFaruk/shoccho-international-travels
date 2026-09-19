@@ -1,20 +1,37 @@
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/navigation/Navbar";
 import { MobileStickyBar } from "@/components/navigation/MobileStickyBar";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { QuickServiceActions } from "@/components/sections/QuickServiceActions";
 import { PersonalizedDiscovery } from "@/components/sections/PersonalizedDiscovery";
 import { FeaturedPackages } from "@/components/packages/FeaturedPackages";
-import { HajjUmrahFeature } from "@/components/sections/HajjUmrahFeature";
-import { DestinationDiscovery } from "@/components/destinations/DestinationDiscovery";
-import { ServicesSection } from "@/components/services/ServicesSection";
+
+// Server components — static, no JS needed client-side
 import { WhyShoccho } from "@/components/sections/WhyShoccho";
 import { FounderSection } from "@/components/sections/FounderSection";
 import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
 import { TravelStories } from "@/components/sections/TravelStories";
-import { AppComingSoon } from "@/components/sections/AppComingSoon";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { OfficeLocation } from "@/components/sections/OfficeLocation";
 import { Footer } from "@/components/layout/Footer";
+
+// Client components lazy-loaded — below the fold, loaded after LCP
+const HajjUmrahFeature = dynamic(
+  () => import("@/components/sections/HajjUmrahFeature").then((m) => ({ default: m.HajjUmrahFeature })),
+  { ssr: true }
+);
+const DestinationDiscovery = dynamic(
+  () => import("@/components/destinations/DestinationDiscovery").then((m) => ({ default: m.DestinationDiscovery })),
+  { ssr: true }
+);
+const ServicesSection = dynamic(
+  () => import("@/components/services/ServicesSection").then((m) => ({ default: m.ServicesSection })),
+  { ssr: true }
+);
+const AppComingSoon = dynamic(
+  () => import("@/components/sections/AppComingSoon").then((m) => ({ default: m.AppComingSoon })),
+  { ssr: true }
+);
 
 export default function Home() {
   return (
@@ -84,5 +101,3 @@ export default function Home() {
     </div>
   );
 }
-
-

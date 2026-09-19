@@ -151,7 +151,7 @@ export default function PackagesPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {filteredPackages.map((pkg) => {
+              {filteredPackages.map((pkg, idx) => {
                 const isWishlisted = wishlist.includes(pkg.id);
                 const isCompared = compareList.includes(pkg.id);
 
@@ -167,6 +167,8 @@ export default function PackagesPage() {
                         src={pkg.imageUrl}
                         alt={pkg.titleBn || pkg.title}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={idx === 0}
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

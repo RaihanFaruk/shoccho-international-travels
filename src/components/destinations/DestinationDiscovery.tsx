@@ -17,7 +17,7 @@ const asiaDestinations = [
     tag: "সিলেট",
     title: "শ্রীমঙ্গল চা বাগান ও লাউয়াছড়া",
     subtitle: "সবুজের কোলে প্রশান্তির ছোঁয়া",
-    image: "https://images.unsplash.com/photo-1597403491447-3ab06f8a4be5?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "d3",

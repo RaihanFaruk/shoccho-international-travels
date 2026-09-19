@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "স্বচ্ছ ইন্টারন্যাশনাল ট্রাভেলস | Shoccho International Travels",
   description:
-    "পবিত্র হজ, ওমরাহ কাফেলা, আধুনিক ফ্লাইট বুকিং ও বিশ্বস্ত এম্বাসি ভিসা প্রসেসিং - স্বচ্ছ ইন্টারন্যাশনাল ট্রাভেলস, জয়তুন প্লাজা, নবীনগর, সাভার, ঢাকা।",
+    "পবিত্র হজ, ওমরাহ কাফেলা, আধুনিক ফ্লাইট বুকিং ও বিশ্বস্ত এম্বাসি ভিসা প্রসেসিং - স্বচ্ছ ইন্টারন্যাশনাল ট্রাভেলস, জয়তুন প্লাজা, নবীনগর, সাভার, ঢাকা।",
   keywords: [
     "Shoccho International Travels",
     "স্বচ্ছ ইন্টারন্যাশনাল ট্রাভেলস",
@@ -28,13 +28,19 @@ export default function RootLayout({
   return (
     <html lang="bn" className="h-full antialiased scroll-smooth">
       <head>
+        {/* Preconnect to Google Fonts CDN — reduces DNS + TLS handshake overhead */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
+        {/*
+          display=optional: fonts load non-blocking, no layout shift (no swap after first render).
+          Latin fonts (Playfair Display, Inter) are small and load quickly.
+          Bengali fonts (Noto Serif Bengali, Hind Siliguri) are large — optional prevents CLS.
+        */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=optional"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://images.unsplash.com" />
         <link
           rel="preload"
           href="/fonts/material-symbols-outlined.woff2"
@@ -53,4 +59,3 @@ export default function RootLayout({
     </html>
   );
 }
-

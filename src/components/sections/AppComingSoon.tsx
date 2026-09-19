@@ -1,6 +1,17 @@
 "use client";
 
+import { useState } from "react";
+
 export function AppComingSoon() {
+  const [contact, setContact] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleWaitlistSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!contact.trim()) return;
+    setIsSubmitted(true);
+  };
+
   return (
     <div className="w-full bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto px-gutter-lg pt-margin pb-space-lg">
@@ -20,21 +31,59 @@ export function AppComingSoon() {
               <p className="font-body-lg text-body-lg text-on-primary-container max-w-xl mb-space-lg leading-relaxed">
                 স্বচ্ছ ট্রাভেলস মোবাইল অ্যাপের মাধ্যমে রিয়েল-টাইম ফ্লাইট ট্র্যাকিং, ওমরাহ তাওয়াফ ও সাঈ ট্র্যাকার, ই-পাসপোর্ট স্ট্যাটাস এবং জরুরি মোয়াল্লিম ডিরেক্টরি সাপোর্ট পাওয়া যাবে এক প্ল্যাটফর্মে।
               </p>
-              <div className="flex flex-wrap items-center gap-space-md">
-                <div className="px-space-md py-2.5 bg-surface-container-lowest/10 backdrop-blur-md rounded-xl flex items-center gap-space-sm border border-on-primary/10">
-                  <span className="material-symbols-outlined text-2xl">install_mobile</span>
-                  <div className="flex flex-col">
-                    <span className="font-label-sm text-label-sm text-on-primary/70 uppercase">Available on</span>
-                    <span className="font-title-lg text-title-lg font-semibold">Google Play</span>
+
+              {/* Functional Waitlist Email/Mobile Capture */}
+              <div className="max-w-lg">
+                {isSubmitted ? (
+                  <div className="p-4 rounded-xl bg-surface-container-lowest/15 backdrop-blur-md border border-on-primary/20 flex items-center gap-3">
+                    <span className="material-symbols-outlined text-secondary-fixed text-2xl">
+                      check_circle
+                    </span>
+                    <div>
+                      <h4 className="font-title-md text-sm font-semibold text-white">
+                        ধন্যবাদ! আপনি ওয়েটলিস্টে অন্তর্ভুক্ত হয়েছেন
+                      </h4>
+                      <p className="text-xs text-on-primary/80 mt-0.5">
+                        অ্যাপ উন্মোচনের সাথে সাথে আপনাকে সরাসরি লিংক পাঠানো হবে।
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="px-space-md py-2.5 bg-surface-container-lowest/10 backdrop-blur-md rounded-xl flex items-center gap-space-sm border border-on-primary/10">
-                  <span className="material-symbols-outlined text-2xl">file_download</span>
-                  <div className="flex flex-col">
-                    <span className="font-label-sm text-label-sm text-on-primary/70 uppercase">Download on</span>
-                    <span className="font-title-lg text-title-lg font-semibold">App Store</span>
-                  </div>
-                </div>
+                ) : (
+                  <form onSubmit={handleWaitlistSubmit} className="space-y-2.5">
+                    <div className="flex flex-col sm:flex-row gap-2">
+                      <div className="relative flex-1">
+                        <label htmlFor="app-waitlist-input" className="sr-only">
+                          মোবাইল নম্বর বা ইমেইল ঠিকানা
+                        </label>
+                        <input
+                          id="app-waitlist-input"
+                          type="text"
+                          required
+                          value={contact}
+                          onChange={(e) => setContact(e.target.value)}
+                          placeholder="আপনার মোবাইল নম্বর বা ইমেইল লিখুন"
+                          aria-label="মোবাইল নম্বর বা ইমেইল ঠিকানা"
+                          className="w-full px-4 py-3 bg-surface-container-lowest/10 backdrop-blur-md rounded-xl text-white placeholder-on-primary/60 border border-on-primary/20 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary"
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        className="px-5 py-3 bg-[#fed65b] hover:bg-[#ffe088] text-[#00453d] font-semibold text-sm rounded-xl shadow-md transition-all whitespace-nowrap flex items-center justify-center gap-1.5 shrink-0"
+                      >
+                        <span className="material-symbols-outlined text-sm">notifications_active</span>
+                        <span>লঞ্চ নোটিফিকেশন পান</span>
+                      </button>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs text-on-primary/75 pt-1">
+                      <span className="flex items-center gap-1">
+                        <span className="material-symbols-outlined text-xs text-secondary-fixed">check</span>
+                        <span>Android ও iOS এর জন্য প্রস্তুত হচ্ছে</span>
+                      </span>
+                      <span>•</span>
+                      <span>কোনো স্প্যাম নয়</span>
+                    </div>
+                  </form>
+                )}
               </div>
             </div>
 
@@ -69,4 +118,3 @@ export function AppComingSoon() {
     </div>
   );
 }
-

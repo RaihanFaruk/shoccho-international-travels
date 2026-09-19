@@ -153,15 +153,23 @@ export default function MuallimsPage() {
               >
                 {/* Scholar Avatar & Badge */}
                 <div className="flex flex-col items-center text-center shrink-0 w-full md:w-56">
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-[#fed65b] shadow-md mb-3">
-                    <Image
-                      src={muallim.photoUrl}
-                      alt={muallim.name}
-                      fill
-                      sizes="128px"
-                      className="object-cover"
-                    />
-                  </div>
+                  {muallim.id === "muallim-1" ? (
+                    <div className="w-32 h-32 rounded-full bg-gradient-to-b from-[#005a50] to-[#003831] border-4 border-[#fed65b] flex items-center justify-center shadow-md mb-3 ring-4 ring-[#735c00]/30 shrink-0">
+                      <span className="font-serif text-5xl font-bold text-[#ffe088] drop-shadow-sm">
+                        ফ
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-[#fed65b] shadow-md mb-3">
+                      <Image
+                        src={muallim.photoUrl}
+                        alt={muallim.name}
+                        fill
+                        sizes="128px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
                   <span className="px-3 py-1 bg-[#00453d] text-[#fed65b] font-label-sm text-[11px] font-bold rounded-full shadow-sm mb-1">
                     ★ {muallim.verificationLevel}
                   </span>

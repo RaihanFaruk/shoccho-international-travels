@@ -4,21 +4,21 @@ const testimonials = [
   {
     quote:
       "গত রমজানে স্বচ্ছ ট্রাভেলস-এর মাধ্যমে ওমরাহ পালন করেছি। তাদের মক্কার হোটেল হারামাইনের একেবারে কাছাকাছি ছিল এবং মোয়াল্লিম সাহেবের গাইডেন্স অতুলনীয় ছিল।",
-    initial: "হাজী",
+    initial: "হা",
     author: "হাজী রফিকুল ইসলাম",
     info: "উত্তরা, ঢাকা • ওমরাহ কাফেলা (নমুনা পর্যালোচনা)",
   },
   {
     quote:
       "পরিবার নিয়ে মালদ্বীপ ট্যুর প্যাকেজ বুক করেছিলাম। এয়ারপোর্ট ট্রান্সফার, ওয়াটার ভিলা এবং রিসোর্টের হালাল খাবার—সবকিছুই নিখুঁত ও চমৎকার ব্যবস্থাপনায় সম্পন্ন হয়েছে।",
-    initial: "সাদিয়া",
+    initial: "সা",
     author: "সাদিয়া আখতার ও পরিবার",
     info: "ধানমন্ডি, ঢাকা • মালদ্বীপ প্যাকেজ (নমুনা পর্যালোচনা)",
   },
   {
     quote:
       "জরুরি ব্যবসায়িক কাজে তুরস্কের ভিসা ও এয়ার টিকিট প্রয়োজন ছিল। স্বচ্ছ ট্রাভেলস মাত্র ৪ কার্যদিবসের মধ্যে সব প্রসেসিং সম্পন্ন করে দিয়েছে। সার্ভিস সততা প্রশংসনীয়।",
-    initial: "মাহতাব",
+    initial: "মা",
     author: "ইঞ্জিনিয়ার মাহতাব উদ্দিন",
     info: "মিরপুর, ঢাকা • ভিসা ও এয়ার টিকিট (নমুনা পর্যালোচনা)",
   },
@@ -73,7 +73,7 @@ export function TestimonialsSection() {
               </div>
 
               <div className="flex items-center gap-3 pt-3 border-t border-[#e6f0eb]">
-                <div className="w-10 h-10 rounded-full bg-[#e0eae5] flex items-center justify-center text-[#00453d] font-bold text-xs shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#00453d] text-[#fed65b] flex items-center justify-center font-bold text-sm shrink-0 font-serif ring-2 ring-[#fed65b]/40 shadow-sm">
                   {t.initial}
                 </div>
                 <div>

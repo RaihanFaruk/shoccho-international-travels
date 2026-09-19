@@ -63,14 +63,20 @@ export function ConsultationBookingModal({ muallim, isOpen, onClose }: Props) {
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Scholar Preview */}
               <div className="p-3 bg-[#f2fcf6] rounded-xl border border-[#dbe5e0] flex items-center gap-3">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#fed65b] shrink-0">
-                  <Image
-                    src={muallim.photoUrl}
-                    alt={muallim.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                {muallim.id === "muallim-1" ? (
+                  <div className="w-12 h-12 rounded-full bg-[#00453d] text-[#ffe088] font-serif font-bold text-lg flex items-center justify-center border-2 border-[#fed65b] shrink-0">
+                    ফ
+                  </div>
+                ) : (
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#fed65b] shrink-0">
+                    <Image
+                      src={muallim.photoUrl}
+                      alt={muallim.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <div>
                   <h4 className="font-title-md text-sm font-bold text-[#00453d]">
                     {muallim.name}

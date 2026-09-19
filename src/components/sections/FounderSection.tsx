@@ -9,24 +9,47 @@ export function FounderSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="bg-[#ecf6f1] rounded-2xl p-6 sm:p-10 lg:p-12 overflow-hidden shadow-md border border-[#dbe5e0]/80">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left: Founder Portrait */}
+            {/* Left: Founder Dignified Executive Presentation */}
             <div className="lg:col-span-5 relative">
-              <div className="relative w-full h-[360px] sm:h-[420px] rounded-xl overflow-hidden shadow-lg border border-[#dbe5e0]">
-                <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
-                  alt="হাফেজ মাওলানা মোঃ ফজল রাব্বি - প্রতিষ্ঠাতা ও চেয়ারম্যান"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#00453d]/80 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="font-label-sm text-label-sm uppercase tracking-widest text-[#ffe088] font-bold block mb-1">
+              <div className="relative w-full h-[360px] sm:h-[420px] rounded-2xl overflow-hidden shadow-xl border-2 border-[#735c00]/30 bg-gradient-to-br from-[#00453d] via-[#003730] to-[#012622] text-white p-6 sm:p-8 flex flex-col justify-between">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[#fed65b]/10 rounded-full blur-2xl pointer-events-none" />
+                
+                {/* Header Badge */}
+                <div className="relative z-10 flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#fed65b]/20 border border-[#fed65b]/40 rounded-full text-[#ffe088] font-label-sm text-xs font-bold uppercase tracking-wider">
+                    <span className="material-symbols-outlined text-xs">verified</span>
                     প্রতিষ্ঠাতা ও চেয়ারম্যান
                   </span>
-                  <h4 className="font-headline-md text-xl sm:text-2xl font-serif font-bold">
+                  <span className="text-[10px] text-[#fed65b]/80 font-sans uppercase tracking-widest font-semibold">
+                    OFFICIAL LEADERSHIP
+                  </span>
+                </div>
+
+                {/* Center Monogram Emblem */}
+                <div className="relative z-10 flex flex-col items-center text-center my-auto">
+                  <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-b from-[#005a50] to-[#003831] border-4 border-[#fed65b] flex items-center justify-center shadow-2xl mb-4 ring-4 ring-[#735c00]/30">
+                    <span className="font-serif text-5xl sm:text-6xl font-bold text-[#ffe088] drop-shadow-md">
+                      ফ
+                    </span>
+                    <div className="absolute -bottom-2 px-3 py-0.5 bg-[#735c00] text-[#ffe088] text-[10px] font-bold rounded-full uppercase tracking-wider border border-[#fed65b]/40">
+                      মাওলানা
+                    </div>
+                  </div>
+                  <h4 className="font-headline-md text-xl sm:text-2xl font-serif font-bold text-white mb-1">
                     হাফেজ মাওলানা মোঃ ফজল রাব্বি
                   </h4>
+                  <p className="font-label-sm text-xs text-[#fed65b] tracking-wider font-semibold">
+                    Shoccho Travels প্রতিষ্ঠাতা ও প্রধান মোয়াল্লিম
+                  </p>
+                </div>
+
+                {/* Footer Credential */}
+                <div className="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#ecf6f1]/80">
+                  <span>১৪+ বছর হজ-ওমরাহ খেদমত</span>
+                  <span className="flex items-center gap-1 text-[#fed65b]">
+                    <span className="material-symbols-outlined text-xs">verified_user</span>
+                    <span>যাচাইকৃত নেতৃত্ব</span>
+                  </span>
                 </div>
               </div>
             </div>

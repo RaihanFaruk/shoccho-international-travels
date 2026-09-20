@@ -10,7 +10,6 @@ import { FeaturedPackages } from "@/components/packages/FeaturedPackages";
 // Server components — static, no JS needed client-side
 import { WhyShoccho } from "@/components/sections/WhyShoccho";
 import { FounderSection } from "@/components/sections/FounderSection";
-import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
 import { TravelStories } from "@/components/sections/TravelStories";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { OfficeLocation } from "@/components/sections/OfficeLocation";
@@ -81,10 +80,7 @@ export default function Home() {
           <FounderSection />
         </div>
 
-        {/* 11. Testimonials and editorial inspiration */}
-        <div id="testimonials">
-          <TestimonialsSection />
-        </div>
+        {/* 11. Editorial inspiration */}
         <div id="stories">
           <TravelStories />
         </div>

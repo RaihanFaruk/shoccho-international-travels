@@ -99,35 +99,6 @@ export function HeroSection() {
                 </span>
               </div>
 
-              {/* Floating Jewelry Metric Overlays */}
-              <div className="absolute bottom-4 left-4 right-4 p-4 bg-[#ffffff]/95 backdrop-blur-md rounded-xl shadow-lg border border-[#dbe5e0]/90">
-                <div className="grid grid-cols-3 divide-x divide-[#bec9c5]/40 text-center">
-                  <div className="px-1">
-                    <span className="block font-headline-md text-xl sm:text-2xl text-[#00453d] font-serif font-bold">
-                      ৯৯.৮%
-                    </span>
-                    <span className="font-label-sm text-[11px] sm:text-xs text-[#3f4946] font-medium">
-                      ভিসা অনুমোদন
-                    </span>
-                  </div>
-                  <div className="px-1">
-                    <span className="block font-headline-md text-xl sm:text-2xl text-[#735c00] font-serif font-bold">
-                      ১২,০০০+
-                    </span>
-                    <span className="font-label-sm text-[11px] sm:text-xs text-[#3f4946] font-medium">
-                      সন্তুষ্ট তীর্থযাত্রী
-                    </span>
-                  </div>
-                  <div className="px-1">
-                    <span className="block font-headline-md text-xl sm:text-2xl text-[#00453d] font-serif font-bold">
-                      ১০০%
-                    </span>
-                    <span className="font-label-sm text-[11px] sm:text-xs text-[#3f4946] font-medium">
-                      স্বচ্ছ মূল্য নীতি
-                    </span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

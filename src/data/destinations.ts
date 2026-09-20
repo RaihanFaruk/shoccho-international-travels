@@ -29,7 +29,7 @@ export const destinationsData: Destination[] = [
     country: "Malaysia",
     region: "Southeast Asia",
     description: "Iconic twin towers, lush ancient rainforests, duty-free island shores, and multicultural cuisine.",
-    imageUrl: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80",
     popularFor: ["Petronas Towers", "SkyCab Langkawi", "Batu Caves", "Luxury Resorts"],
     startingPrice: 520,
     featured: true,
